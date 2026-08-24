@@ -122,7 +122,7 @@ function renderDetail(site, adventure) {
     </section>
     <div class="detail-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}">
       <article class="story">
-        <section><p class="kicker">Worum geht es?</p><h2>Der Abend beginnt …</h2><p>${escapeHtml(adventure.synopsis)}</p></section>
+        <section><h2>Worum geht es?</h2><p>${escapeHtml(adventure.synopsis)}</p></section>
         <section><p class="kicker">Eure Figuren</p><h2>Wen spielt ihr?</h2><p>${escapeHtml(adventure.characters)}</p></section>
         <section><p class="kicker">Ganz ohne Vorwissen</p><h2>Wie funktionieren die Regeln?</h2><p>${escapeHtml(adventure.rules)}</p></section>
       </article>

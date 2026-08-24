@@ -1,0 +1,20 @@
+{
+  "slug": "vom-schwert-zum-schneebesen",
+  "title": "Vom Schwert zum Schneebesen",
+  "shortPitch": "Ein leichtes Fantasy-Abenteuer für alle, die Heldenmut auch abseits des Schlachtfelds beweisen wollen.",
+  "synopsis": "Dieses Abenteuer ist noch in Arbeit. Weitere Informationen zur Ausgangslage und dazu, was euch an diesem Abend erwartet, folgen noch.",
+  "mood": ["abenteuerlich", "leicht", "humorvoll"],
+  "characters": "Ihr erstellt eure Figuren gemeinsam vor dem Start. Das geht schnell und gibt euch trotzdem genug Raum für eigene Ideen.",
+  "rules": "Die Regeln sind sehr einfach und werden direkt beim Spielen erklärt. Vorkenntnisse braucht ihr nicht.",
+  "system": "Tiny D6",
+  "duration": "etwa 3–4 Stunden",
+  "players": "3–5 Personen",
+  "experience": "Keine Vorerfahrung nötig",
+  "beginnerFriendly": true,
+  "accent": "gold",
+  "pageTheme": {
+    "background": "#efe6d4",
+    "mode": "light"
+  },
+  "image": null
+}

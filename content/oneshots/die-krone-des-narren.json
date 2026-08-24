@@ -1,0 +1,20 @@
+{
+  "slug": "die-krone-des-narren",
+  "title": "Die Krone des Narren",
+  "shortPitch": "Die Krone eures Königs wurde gestohlen – und ihre Spur führt in ein verdrehtes Schloss voller Narren und gefährlicher Spiele.",
+  "synopsis": "Ihr arbeitet im Dienst eines Königs, dessen Krone gestohlen wurde. Um sie zurückzubringen, betretet ihr ein stilisiertes, überzeichnetes Parallelweltschloss wie aus einem japanischen Fantasy-Videospiel. Hinter seinen Türen lauern Gestalten und Gefahren rund um Narren, Clowns und höfische Maskenspiele. Euch erwarten fantastische Orte, spannende Kämpfe und trickreiche Rätsel.",
+  "mood": ["heroisch", "fantastisch", "verspielt"],
+  "characters": "Es gibt eine Auswahl vorbereiteter Heldinnen und Helden. Ihr sucht euch eine Figur aus und passt sie anschließend mit einigen eigenen Entscheidungen an.",
+  "rules": "Das Spiel bietet verschiedene Fähigkeiten und taktische Möglichkeiten. Wir gehen die für eure Figuren wichtigen Regeln gemeinsam durch; Vorkenntnisse braucht ihr nicht.",
+  "system": "Fabula Ultima",
+  "duration": "4–5 Stunden",
+  "players": "3–5 Personen",
+  "experience": "Keine Vorerfahrung nötig",
+  "beginnerFriendly": true,
+  "accent": "coral",
+  "pageTheme": {
+    "background": "#f2dfc2",
+    "mode": "light"
+  },
+  "image": null
+}

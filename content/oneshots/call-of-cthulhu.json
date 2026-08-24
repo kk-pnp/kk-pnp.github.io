@@ -1,0 +1,21 @@
+{
+  "slug": "call-of-cthulhu",
+  "title": "Call of Cthulhu",
+  "shortPitch": "Ein Fall voller Geheimnisse und kosmischem Horror – das konkrete Abenteuer folgt noch.",
+  "synopsis": "Welches Call-of-Cthulhu-Abenteuer gespielt wird, steht noch nicht fest. Hier folgen später die Ausgangslage und ein spoilerfreier Eindruck davon, was euch an diesem Abend erwartet.",
+  "mood": ["düster", "geheimnisvoll", "horror"],
+  "characters": "Je nach Gruppe und verfügbarer Zeit wählt ihr aus vorbereiteten Figuren oder erstellt eure Charaktere gemeinsam vor dem Start.",
+  "rules": "Das Spiel hat etwas mehr Regeln, Vorkenntnisse braucht ihr trotzdem keine. Alles Wichtige gehen wir vor dem Start gemeinsam durch.",
+  "system": "Call of Cthulhu",
+  "duration": "etwa 4–5 Stunden",
+  "players": "3–5 Personen",
+  "experience": "Keine Vorerfahrung nötig",
+  "beginnerFriendly": true,
+  "contentNote": "Das konkrete Abenteuer und seine inhaltlichen Hinweise werden später ergänzt.",
+  "accent": "moss",
+  "pageTheme": {
+    "background": "#111716",
+    "mode": "dark"
+  },
+  "image": null
+}

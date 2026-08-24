@@ -1,0 +1,20 @@
+{
+  "slug": "lady-bloodbath",
+  "title": "Lady Bloodbath",
+  "shortPitch": "Entführt die Mutter des Gouverneurs von Cartagena – mit Seemannsgarn, Dreistigkeit und einem Plan, der kaum lange halten wird.",
+  "synopsis": "Als Piratencrew erhaltet ihr einen ebenso einfachen wie riskanten Auftrag: Die Mutter des Gouverneurs von Cartagena soll entführt werden. Auf dem Weg dorthin könnt ihr Seemannsgarn über frühere Abenteuer erzählen – und mit euren erfundenen Geschichten die gemeinsame Spielwelt tatsächlich verändern. Was davon wahr ist, entscheidet sich oft erst in dem Moment, in dem es wichtig wird.",
+  "mood": ["piratig", "chaotisch", "actionreich"],
+  "characters": "Ihr erstellt eure Piratencrew gemeinsam zu Beginn. Die Figuren sind schnell gebaut und entstehen passend zu euren Ideen für die Gruppe.",
+  "rules": "Die Regeln sind sehr leicht und für chaotische, actionreiche und humorvolle One-Shots gemacht. Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem, das ich mit Spielerinnen und Spielern ausprobieren und gemeinsam verbessern möchte.",
+  "system": "Year Zero: Chaos Engine – in Entwicklung",
+  "duration": "etwa 3–4 Stunden",
+  "players": "3–5 Personen",
+  "experience": "Keine Vorerfahrung nötig",
+  "beginnerFriendly": true,
+  "accent": "coral",
+  "pageTheme": {
+    "background": "#201316",
+    "mode": "dark"
+  },
+  "image": null
+}
