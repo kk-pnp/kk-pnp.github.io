@@ -1,20 +1,24 @@
 {
-  "slug": "call-of-cthulhu",
-  "title": "Call of Cthulhu",
-  "shortPitch": "Ein Fall voller Geheimnisse und kosmischem Horror – das konkrete Abenteuer folgt noch.",
-  "synopsis": "Call of Cthulhu ist ein Rollenspiel über Geheimnisse, Ermittlungen und kosmischen Horror. Ihr spielt gewöhnliche Menschen, die unerklärlichen Vorfällen nachgehen und dabei auf Wahrheiten stoßen, die besser verborgen geblieben wären.\n\nWelches Call-of-Cthulhu-Abenteuer gespielt wird, steht noch nicht fest. Hier folgen später die Ausgangslage und ein spoilerfreier Eindruck davon, was euch an diesem Abend erwartet.",
-  "mood": ["düster", "geheimnisvoll", "horror"],
+  "slug": "was-ist-im-keller",
+  "title": "Was ist im Keller?",
+  "shortPitch": "Ein Mord in einer abgelegenen Familienhütte – und eine Kellertreppe, hinter der die Vergangenheit der Blackwoods nicht ruhen will.",
+  "synopsis": "Call of Cthulhu ist ein Rollenspiel über Geheimnisse, Ermittlungen und kosmischen Horror. Ihr spielt gewöhnliche Menschen, die unerklärlichen Vorfällen nachgehen und dabei auf Wahrheiten stoßen, die besser verborgen geblieben wären.\n\nDer wohlhabende Anwalt Arthur Blackwood soll seine Frau Rose ermordet haben. Um Beweise für seine Unschuld zu finden, untersucht ihr die abgelegene Hütte seiner Familie. Im Keller stoßt ihr auf Spuren einer jahrhundertealten Familiengeschichte und Hinweise darauf, dass in der Mordnacht etwas Unmenschliches geschehen ist. Je tiefer ihr den Geheimnissen der Blackwoods folgt, desto deutlicher wird: Etwas im Dunkeln ist noch da – und es beginnt, auf euch aufmerksam zu werden.",
+  "mood": ["ermittelnd", "beklemmend", "kosmischer Horror"],
   "characters": "Je nach Gruppe und verfügbarer Zeit wählt ihr aus vorbereiteten Figuren oder erstellt eure Charaktere gemeinsam vor dem Start.",
   "rules": "Call of Cthulhu hat etwas mehr Regeln als die sehr leichten One-Shot-Systeme. Ihr solltet Lust darauf haben, euch auf einige Spielwerte und Regelmechaniken einzulassen. Auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen; alles Wichtige gehen wir gemeinsam durch.",
   "system": "Call of Cthulhu",
   "duration": "etwa 4–5 Stunden",
   "players": "3–5 Personen",
   "experience": "Keine Vorerfahrung nötig; etwas Regellust hilfreich",
-  "contentNote": "Das konkrete Abenteuer und seine inhaltlichen Hinweise werden später ergänzt.",
+  "contentNote": "Enthält Mord, menschliche Überreste und übernatürlichen Horror.",
   "accent": "moss",
   "pageTheme": {
     "background": "#111716",
     "mode": "dark"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/was-ist-im-keller.webp",
+    "alt": "Eine steile alte Holztreppe führt zwischen feuchten Kellerwänden in völlige Dunkelheit",
+    "position": "50% 50%"
+  }
 }
