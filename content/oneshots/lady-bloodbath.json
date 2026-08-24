@@ -1,6 +1,8 @@
 {
   "slug": "lady-bloodbath",
   "title": "Lady Bloodbath",
+  "order": 6,
+  "layout": "wide",
   "shortPitch": "Entführt die Mutter des Gouverneurs von Cartagena – mit Seemannsgarn, Dreistigkeit und einem Plan, der kaum lange halten wird.",
   "synopsis": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots in ganz unterschiedlichen Settings. Die Regeln sind schnell erklärt und werden derzeit noch ausprobiert und weiterentwickelt.\n\nIn Lady Bloodbath erhaltet ihr als Piratencrew einen ebenso einfachen wie riskanten Auftrag: Die Mutter des Gouverneurs von Cartagena soll entführt werden. Auf dem Weg dorthin könnt ihr Seemannsgarn über frühere Abenteuer erzählen – und mit euren erfundenen Geschichten die gemeinsame Spielwelt tatsächlich verändern. Was davon wahr ist, entscheidet sich oft erst in dem Moment, in dem es wichtig wird.",
   "mood": ["piratig", "chaotisch", "actionreich"],

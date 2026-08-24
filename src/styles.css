@@ -55,7 +55,7 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
   color: inherit;
   text-decoration: none;
 }
-.card:nth-child(3n) { grid-column: span 12; min-height: 26rem; }
+.card[data-layout="wide"] { grid-column: span 12; min-height: 28rem; }
 .card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 55%, transparent); }
 .card[hidden] { display: none; }
 .card-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -96,6 +96,13 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .facts dt { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
 .facts dd { margin: 0; }
 .content-note { margin-top: 1.2rem; padding: 1rem; border-radius: .6rem; background: color-mix(in srgb, var(--accent) 10%, transparent); color: #d7d0c5; font-size: .88rem; }
+.adventure-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding-bottom: 3rem; }
+.adventure-nav-link { display: grid; gap: .35rem; min-height: 7rem; padding: 1.2rem 1.35rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+.adventure-nav-link:hover { border-color: color-mix(in srgb, var(--accent, var(--gold)) 55%, transparent); transform: translateY(-2px); }
+.adventure-nav-link:focus-visible { outline: 3px solid var(--accent, var(--gold)); outline-offset: 4px; }
+.adventure-nav-link span { color: var(--muted); font-size: .72rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.adventure-nav-link strong { align-self: end; font-family: ui-serif, Georgia, Cambria, serif; font-size: clamp(1.25rem, 2.5vw, 1.8rem); font-weight: 500; line-height: 1.1; }
+.adventure-nav-next { text-align: right; }
 [data-accent="gold"] { --accent: var(--gold); }
 [data-accent="cyan"] { --accent: var(--cyan); }
 [data-accent="coral"] { --accent: var(--coral); }
@@ -103,9 +110,11 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 
 @media (max-width: 760px) {
   .adventure-grid { display: block; }
-  .card, .card:nth-child(3n) { min-height: 28rem; margin-bottom: 1rem; }
+  .card, .card[data-layout="wide"] { min-height: 28rem; margin-bottom: 1rem; }
   .detail-layout { grid-template-columns: 1fr; }
   .facts { position: static; order: -1; }
+  .adventure-nav { grid-template-columns: 1fr; }
+  .adventure-nav-placeholder { display: none; }
   .site-footer { display: block; }
 }
 

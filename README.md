@@ -16,6 +16,15 @@ Ein optionaler Hinweis wie „Coming Soon“ erscheint auf der Übersicht und de
 "tag": "Coming Soon"
 ```
 
+Die Reihenfolge und Kartenbreite lassen sich ebenfalls pro Abenteuer festlegen:
+
+```json
+"order": 3,
+"layout": "wide"
+```
+
+`layout` kann `standard` oder `wide` sein. Die Links zum vorherigen und nächsten Abenteuer folgen automatisch der mit `order` festgelegten Reihenfolge.
+
 ## Bilder ergänzen
 
 1. Bild unter `assets/images/` ablegen, zum Beispiel `assets/images/letzte-laterne.webp`.

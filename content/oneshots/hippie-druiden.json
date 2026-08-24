@@ -1,6 +1,8 @@
 {
   "slug": "hippie-druiden",
   "title": "Hippie-Druiden",
+  "order": 4,
+  "layout": "standard",
   "shortPitch": "Eine Druidenkommune, ein VW-Büsschen und ein Atomkraftwerk, das auf keinen Fall gebaut werden darf.",
   "synopsis": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots in ganz unterschiedlichen Settings. Die Regeln sind schnell erklärt und werden derzeit noch ausprobiert und weiterentwickelt.\n\nIn Hippie-Druiden hat sich in den Siebzigern eine Kommune von Druiden der Hippiebewegung angeschlossen. Dabei ging der Großteil ihrer Magie verloren – nur die Fähigkeit, sich mehr schlecht als recht in Tiere zu verwandeln, ist ihnen geblieben. Mit ihrem VW-Büsschen machen sie sich auf den Weg, um den Bau eines Atomkraftwerks zu verhindern. Mit Protest, Verwandlungen und improvisierten Plänen stellen sie sich den Verantwortlichen entgegen.",
   "mood": ["absurd", "chaotisch", "humorvoll"],

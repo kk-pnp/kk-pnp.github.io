@@ -33,6 +33,8 @@ function validateAdventure(adventure, filename) {
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
   if (adventure.tag !== undefined && (typeof adventure.tag !== "string" || !adventure.tag.trim())) errors.push('"tag" muss eine nicht-leere Zeichenkette sein');
+  if (adventure.order !== undefined && (!Number.isInteger(adventure.order) || adventure.order < 1)) errors.push('"order" muss eine positive ganze Zahl sein');
+  if (adventure.layout !== undefined && !["standard", "wide"].includes(adventure.layout)) errors.push('"layout" muss "standard" oder "wide" sein');
   if (adventure.pageTheme !== undefined) {
     if (!adventure.pageTheme || typeof adventure.pageTheme !== "object" || Array.isArray(adventure.pageTheme)) {
       errors.push('"pageTheme" muss ein Objekt sein');
@@ -68,7 +70,7 @@ function badgeMarkup(adventure) {
 function renderCard(adventure) {
   const moods = adventure.mood.map((mood) => escapeHtml(mood)).join(" · ");
   return `
-    <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
+    <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" data-layout="${escapeHtml(adventure.layout || "standard")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
       ${imageMarkup(adventure, "card-image")}
       <div class="card-content">
         ${badgeMarkup(adventure)}
@@ -78,6 +80,16 @@ function renderCard(adventure) {
         <div class="moods">${moods}</div>
       </div>
     </a>`;
+}
+
+function renderAdventureNavigation(previousAdventure, nextAdventure) {
+  const previous = previousAdventure
+    ? `<a class="adventure-nav-link adventure-nav-previous" rel="prev" href="./${encodeURIComponent(previousAdventure.slug)}.html"><span>← Vorheriges Abenteuer</span><strong>${escapeHtml(previousAdventure.title)}</strong></a>`
+    : '<span class="adventure-nav-placeholder" aria-hidden="true"></span>';
+  const next = nextAdventure
+    ? `<a class="adventure-nav-link adventure-nav-next" rel="next" href="./${encodeURIComponent(nextAdventure.slug)}.html"><span>Nächstes Abenteuer →</span><strong>${escapeHtml(nextAdventure.title)}</strong></a>`
+    : '<span class="adventure-nav-placeholder" aria-hidden="true"></span>';
+  return `<nav class="adventure-nav shell" aria-label="Zwischen den Abenteuern wechseln">${previous}${next}</nav>`;
 }
 
 function pageHead({ title, description, cssPath, image }) {
@@ -114,7 +126,7 @@ function renderIndex(site, adventures) {
 </html>`;
 }
 
-function renderDetail(site, adventure) {
+function renderDetail(site, adventure, previousAdventure, nextAdventure) {
   const pageTheme = adventure.pageTheme || { background: "#111411", mode: "dark" };
   const facts = [
     ["Dauer", adventure.duration], ["Gruppe", adventure.players], ["Erfahrung", adventure.experience],
@@ -140,6 +152,7 @@ function renderDetail(site, adventure) {
       </article>
       <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>${adventure.contentNote ? `<p class="content-note"><strong>Hinweis:</strong> ${escapeHtml(adventure.contentNote)}</p>` : ""}</aside>
     </div>
+    ${renderAdventureNavigation(previousAdventure, nextAdventure)}
   </main>
   <footer class="site-footer shell"><a class="contact-link" href="../index.html">← Zurück zur Übersicht</a></footer>
 </body>
@@ -157,9 +170,14 @@ async function build() {
     return adventure;
   }));
 
+  adventures.sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER) || a.title.localeCompare(b.title, "de"));
+
   const slugs = adventures.map((item) => item.slug);
   const duplicate = slugs.find((slug, index) => slugs.indexOf(slug) !== index);
   if (duplicate) throw new Error(`Der slug "${duplicate}" wird mehrfach verwendet.`);
+  const orders = adventures.filter((item) => item.order !== undefined).map((item) => item.order);
+  const duplicateOrder = orders.find((order, index) => orders.indexOf(order) !== index);
+  if (duplicateOrder !== undefined) throw new Error(`Die Reihenfolge "${duplicateOrder}" wird mehrfach verwendet.`);
 
   if (checkOnly) {
     console.log(`✓ ${adventures.length} Abenteuer geprüft.`);
@@ -178,7 +196,11 @@ async function build() {
   }
 
   await writeFile(path.join(outputDir, "index.html"), renderIndex(site, adventures), "utf8");
-  await Promise.all(adventures.map((adventure) => writeFile(path.join(outputDir, "abenteuer", `${adventure.slug}.html`), renderDetail(site, adventure), "utf8")));
+  await Promise.all(adventures.map((adventure, index) => writeFile(
+    path.join(outputDir, "abenteuer", `${adventure.slug}.html`),
+    renderDetail(site, adventure, adventures[index - 1], adventures[index + 1]),
+    "utf8"
+  )));
   await writeFile(path.join(outputDir, ".nojekyll"), "", "utf8");
   console.log(`✓ Website mit ${adventures.length} Abenteuern nach dist/ gebaut.`);
 }

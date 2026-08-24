@@ -1,6 +1,8 @@
 {
   "slug": "lasers-and-feelings",
   "title": "Lasers & Feelings",
+  "order": 5,
+  "layout": "standard",
   "shortPitch": "Eine schnelle, chaotische Weltraumreise zwischen Lasern und großen Gefühlen.",
   "synopsis": "Lasers & Feelings ist ein sehr kurzes Science-Fiction-Rollenspiel, bei dem eure Figuren zwischen kühlem, technischem Handeln und spontanem, emotionalem Handeln hin- und hergerissen sind. Die einfachen Regeln lassen viel Raum für schnelle Ideen, dramatische Wendungen und herrlichen Weltraumquatsch.\n\nEs gibt kein fest vorgegebenes Abenteuer: Ihr seid die Crew eines Raumschiffs und geratet gemeinsam in eine improvisierte Mission. Welches Problem im All auf euch wartet, entsteht aus euren Figuren, euren Ideen und den Entscheidungen am Spieltisch – von außerirdischen Begegnungen bis zu dramatischen Notfällen an Bord.",
   "mood": ["chaotisch", "lustig", "science-fiction"],

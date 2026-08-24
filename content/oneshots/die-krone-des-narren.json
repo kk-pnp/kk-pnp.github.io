@@ -1,6 +1,8 @@
 {
   "slug": "die-krone-des-narren",
   "title": "Die Krone des Narren",
+  "order": 3,
+  "layout": "wide",
   "shortPitch": "Die Krone eures Königs wurde gestohlen – und ihre Spur führt in ein verdrehtes Schloss voller Narren und gefährlicher Spiele.",
   "synopsis": "Fabula Ultima ist ein Fantasy-Rollenspiel, das von japanischen Videorollenspielen inspiriert ist. Gemeinsam erzählt ihr große Geschichten über aufstrebende Heldinnen und Helden, mächtige Gegenspieler, fantastische Welten, ungewöhnliche Monster und dramatische Kämpfe.\n\nIn Die Krone des Narren arbeitet ihr im Dienst eines Königs, dessen Krone gestohlen wurde. Um sie zurückzubringen, betretet ihr ein stilisiertes, überzeichnetes Parallelweltschloss wie aus einem japanischen Fantasy-Videospiel. Hinter seinen Türen lauern Gestalten und Gefahren rund um Narren, Clowns und höfische Maskenspiele. Euch erwarten fantastische Orte, spannende Kämpfe und trickreiche Rätsel.",
   "mood": ["heroisch", "fantastisch", "verspielt"],

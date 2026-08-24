@@ -1,6 +1,8 @@
 {
   "slug": "was-ist-im-keller",
   "title": "Was ist im Keller?",
+  "order": 1,
+  "layout": "standard",
   "shortPitch": "Ein Mord in einer abgelegenen Familienhütte – und eine Kellertreppe, hinter der die Vergangenheit der Blackwoods nicht ruhen will.",
   "synopsis": "Call of Cthulhu ist ein Rollenspiel über Geheimnisse, Ermittlungen und kosmischen Horror. Ihr spielt gewöhnliche Menschen, die unerklärlichen Vorfällen nachgehen und dabei auf Wahrheiten stoßen, die besser verborgen geblieben wären.\n\nDer wohlhabende Anwalt Arthur Blackwood soll seine Frau Rose ermordet haben. Um Beweise für seine Unschuld zu finden, untersucht ihr die abgelegene Hütte seiner Familie. Im Keller stoßt ihr auf Spuren einer jahrhundertealten Familiengeschichte und Hinweise darauf, dass in der Mordnacht etwas Unmenschliches geschehen ist. Je tiefer ihr den Geheimnissen der Blackwoods folgt, desto deutlicher wird: Etwas im Dunkeln ist noch da – und es beginnt, auf euch aufmerksam zu werden.",
   "mood": ["ermittelnd", "beklemmend", "kosmischer Horror"],
