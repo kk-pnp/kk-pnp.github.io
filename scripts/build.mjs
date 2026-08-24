@@ -76,7 +76,7 @@ function renderCard(adventure) {
         ${badgeMarkup(adventure)}
         <h3>${escapeHtml(adventure.title)}</h3>
         <p class="pitch">${escapeHtml(adventure.shortPitch)}</p>
-        <div class="card-meta"><span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
+        <div class="card-meta">${adventure.system ? `<span>${escapeHtml(adventure.system)}</span>` : ""}<span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
         <div class="moods">${moods}</div>
       </div>
     </a>`;

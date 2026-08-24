@@ -60,6 +60,16 @@ Wenn `pageTheme` fehlt, verwendet die Seite automatisch ein dunkles Standarddesi
 
 Voraussetzung: Node.js 20 oder neuer.
 
+Für eine automatische Live-Vorschau:
+
+```powershell
+npm run dev
+```
+
+Danach `http://localhost:4173` im Browser öffnen. Änderungen an den JSON-Dateien, am CSS oder an Bildern werden automatisch gebaut und die geöffnete Seite lädt anschließend neu. Die Vorschau wird mit `Strg+C` beendet.
+
+Für eine einmalige Prüfung und einen einzelnen Build:
+
 ```powershell
 npm run check
 npm run build

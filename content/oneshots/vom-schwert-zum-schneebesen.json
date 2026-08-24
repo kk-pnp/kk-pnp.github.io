@@ -14,8 +14,8 @@
   "experience": "Keine Vorerfahrung nötig",
   "accent": "gold",
   "pageTheme": {
-    "background": "#efe6d4",
-    "mode": "light"
+    "background": "#0e4a5a",
+    "mode": "dark"
   },
   "image": {
     "src": "assets/images/vom-schwert-zum-schneebesen.webp",

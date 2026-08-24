@@ -14,8 +14,8 @@
   "experience": "Keine Vorerfahrung nötig; etwas Regellust hilfreich",
   "accent": "coral",
   "pageTheme": {
-    "background": "#f2dfc2",
-    "mode": "light"
+    "background": "#35142b",
+    "mode": "dark"
   },
   "image": {
     "src": "assets/images/die-krone-des-narren.webp",
