@@ -1,0 +1,19 @@
+{
+  "slug": "signal-aus-der-tiefe",
+  "title": "Signal aus der Tiefe",
+  "shortPitch": "Eine Forschungsstation schweigt. Tief unter euch sendet trotzdem jemand ein Signal.",
+  "synopsis": "Euer kleines Bergungsteam erreicht eine verlassene Station am Meeresgrund. Der Strom fällt aus, Türen öffnen sich von selbst und aus einem Schacht kommt ein regelmäßiges Klopfen. Ihr habt einen Auftrag – aber vielleicht ist nicht alles, was hier unten gefunden werden will, auch verloren gegangen.",
+  "mood": ["spannend", "düster", "geheimnisvoll"],
+  "activities": ["Eine verlassene Station durchsuchen", "Hinweise aus Aufzeichnungen verbinden", "Mit knappen Mitteln Pläne schmieden", "Unter Zeitdruck Entscheidungen treffen"],
+  "characters": "Ihr wählt aus vorbereiteten Mitgliedern eines Bergungsteams. Jede Figur kann etwas anderes besonders gut.",
+  "rules": "Es gibt einige besondere Fähigkeiten, die wir vor dem Start gemeinsam durchgehen. Alles Weitere lernt ihr beim Spielen.",
+  "system": "Mothership",
+  "duration": "4–5 Stunden",
+  "players": "3–5 Personen",
+  "experience": "Keine Vorerfahrung nötig",
+  "characterCreation": "Figuren sind vorbereitet",
+  "beginnerFriendly": false,
+  "contentNote": "Enge Räume, Dunkelheit und unterschwelliger Horror",
+  "accent": "cyan",
+  "image": null
+}
