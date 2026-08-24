@@ -15,7 +15,7 @@ const escapeHtml = (value = "") => String(value)
   .replaceAll('"', "&quot;")
   .replaceAll("'", "&#039;");
 
-const requiredStrings = ["slug", "title", "shortPitch", "synopsis", "characters", "rules", "duration", "players", "experience", "characterCreation"];
+const requiredStrings = ["slug", "title", "shortPitch", "synopsis", "characters", "rules", "duration", "players", "experience"];
 const allowedAccents = new Set(["gold", "cyan", "coral", "moss"]);
 
 function validateAdventure(adventure, filename) {
@@ -24,7 +24,6 @@ function validateAdventure(adventure, filename) {
     if (typeof adventure[field] !== "string" || !adventure[field].trim()) errors.push(`"${field}" fehlt oder ist leer`);
   });
   if (!Array.isArray(adventure.mood) || adventure.mood.length === 0) errors.push('"mood" muss eine nicht-leere Liste sein');
-  if (!Array.isArray(adventure.activities) || adventure.activities.length === 0) errors.push('"activities" muss eine nicht-leere Liste sein');
   if (typeof adventure.beginnerFriendly !== "boolean") errors.push('"beginnerFriendly" muss true oder false sein');
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
@@ -107,7 +106,7 @@ function renderDetail(site, adventure) {
   const pageTheme = adventure.pageTheme || { background: "#111411", mode: "dark" };
   const facts = [
     ["Dauer", adventure.duration], ["Gruppe", adventure.players], ["Erfahrung", adventure.experience],
-    ["Figuren", adventure.characterCreation], ...(adventure.system ? [["Regelsystem", adventure.system]] : [])
+    ...(adventure.system ? [["Regelsystem", adventure.system]] : [])
   ];
   return `${pageHead({ title: `${adventure.title} – ${site.title}`, description: adventure.shortPitch, cssPath: "../assets/styles.css", image: adventure.image?.src ? `../${adventure.image.src.replace(/^\.\//, "")}` : undefined })}
 <body class="detail-page theme-${pageTheme.mode}" style="--page-bg:${pageTheme.background}">
@@ -124,7 +123,6 @@ function renderDetail(site, adventure) {
     <div class="detail-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}">
       <article class="story">
         <section><p class="kicker">Worum geht es?</p><h2>Der Abend beginnt …</h2><p>${escapeHtml(adventure.synopsis)}</p></section>
-        <section><p class="kicker">Was macht man dabei?</p><h2>Was euch erwartet</h2><ul class="activity-list">${adventure.activities.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section>
         <section><p class="kicker">Eure Figuren</p><h2>Wen spielt ihr?</h2><p>${escapeHtml(adventure.characters)}</p></section>
         <section><p class="kicker">Ganz ohne Vorwissen</p><h2>Wie funktionieren die Regeln?</h2><p>${escapeHtml(adventure.rules)}</p></section>
       </article>
