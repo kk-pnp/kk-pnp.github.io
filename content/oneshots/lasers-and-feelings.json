@@ -10,11 +10,14 @@
   "duration": "2–3 Stunden",
   "players": "3–5 Personen",
   "experience": "Keine Vorerfahrung nötig",
-  "beginnerFriendly": true,
   "accent": "cyan",
   "pageTheme": {
     "background": "#0b1324",
     "mode": "dark"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/lasers-and-feelings.webp",
+    "alt": "Zwei Raumschiffe jagen durch ein Kometenfeld auf einen großen grünen Planeten zu",
+    "position": "50% 50%"
+  }
 }

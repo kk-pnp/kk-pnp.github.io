@@ -10,11 +10,14 @@
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
   "experience": "Keine Vorerfahrung nötig",
-  "beginnerFriendly": true,
   "accent": "gold",
   "pageTheme": {
     "background": "#efe6d4",
     "mode": "light"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/vom-schwert-zum-schneebesen.webp",
+    "alt": "Eine Möwe fliegt über das Meer auf eine Backstube an der Promenade einer nordischen Hafenstadt zu",
+    "position": "50% 50%"
+  }
 }

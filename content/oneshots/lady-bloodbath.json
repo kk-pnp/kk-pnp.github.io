@@ -10,11 +10,14 @@
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
   "experience": "Keine Vorerfahrung nötig",
-  "beginnerFriendly": true,
   "accent": "coral",
   "pageTheme": {
     "background": "#201316",
     "mode": "dark"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/lady-bloodbath.webp",
+    "alt": "Eine wilde Piratenschlägerei in einer Taverne als expressive schwarze Tintenzeichnung",
+    "position": "50% 50%"
+  }
 }

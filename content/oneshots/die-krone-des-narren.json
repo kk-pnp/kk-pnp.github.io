@@ -5,16 +5,19 @@
   "synopsis": "Fabula Ultima ist ein Fantasy-Rollenspiel, das von japanischen Videorollenspielen inspiriert ist. Gemeinsam erzählt ihr große Geschichten über aufstrebende Heldinnen und Helden, mächtige Gegenspieler, fantastische Welten, ungewöhnliche Monster und dramatische Kämpfe.\n\nIn Die Krone des Narren arbeitet ihr im Dienst eines Königs, dessen Krone gestohlen wurde. Um sie zurückzubringen, betretet ihr ein stilisiertes, überzeichnetes Parallelweltschloss wie aus einem japanischen Fantasy-Videospiel. Hinter seinen Türen lauern Gestalten und Gefahren rund um Narren, Clowns und höfische Maskenspiele. Euch erwarten fantastische Orte, spannende Kämpfe und trickreiche Rätsel.",
   "mood": ["heroisch", "fantastisch", "verspielt"],
   "characters": "Es gibt eine Auswahl vorbereiteter Heldinnen und Helden. Ihr sucht euch eine Figur aus und passt sie anschließend mit einigen eigenen Entscheidungen an.",
-  "rules": "Das Spiel bietet verschiedene Fähigkeiten und taktische Möglichkeiten. Wir gehen die für eure Figuren wichtigen Regeln gemeinsam durch; Vorkenntnisse braucht ihr nicht.",
+  "rules": "Fabula Ultima bietet verschiedene Fähigkeiten, Spielwerte und taktische Möglichkeiten und ist deshalb etwas regelintensiver. Ihr solltet Lust darauf haben, euch auf einige Regeln einzulassen. Auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen; alles für eure Figuren Wichtige gehen wir gemeinsam durch.",
   "system": "Fabula Ultima",
   "duration": "4–5 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig",
-  "beginnerFriendly": true,
+  "experience": "Keine Vorerfahrung nötig; etwas Regellust hilfreich",
   "accent": "coral",
   "pageTheme": {
     "background": "#f2dfc2",
     "mode": "light"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/die-krone-des-narren.webp",
+    "alt": "Ein JRPG-Held mit übergroßem Schwert kämpft gegen einen pinken Plüschritter mit Narrenzipfel",
+    "position": "50% 50%"
+  }
 }

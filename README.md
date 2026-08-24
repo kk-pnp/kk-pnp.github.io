@@ -10,6 +10,12 @@ Eine statische Website für Pen-and-Paper-One-Shots. Jeder One-Shot liegt in ein
 
 Für ein neues Abenteuer eine vorhandene JSON-Datei kopieren, umbenennen und die Werte anpassen. Der Dateiname ist frei wählbar; `slug` muss eindeutig sein und darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten.
 
+Ein optionaler Hinweis wie „Coming Soon“ erscheint auf der Übersicht und der Detailseite:
+
+```json
+"tag": "Coming Soon"
+```
+
 ## Bilder ergänzen
 
 1. Bild unter `assets/images/` ablegen, zum Beispiel `assets/images/letzte-laterne.webp`.

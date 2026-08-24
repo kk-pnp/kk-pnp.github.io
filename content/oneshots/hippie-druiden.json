@@ -10,11 +10,14 @@
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
   "experience": "Keine Vorerfahrung nötig",
-  "beginnerFriendly": true,
   "accent": "moss",
   "pageTheme": {
     "background": "#e8d7a6",
     "mode": "light"
   },
-  "image": null
+  "image": {
+    "src": "assets/images/hippie-druiden.webp",
+    "alt": "Ein Bär, eine Maus mit runder Brille und ein Frosch mit Weinflasche fahren in einem heruntergekommenen Hippie-Camper",
+    "position": "50% 50%"
+  }
 }

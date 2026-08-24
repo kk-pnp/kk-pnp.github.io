@@ -30,9 +30,9 @@ function validateAdventure(adventure, filename) {
     if (typeof adventure[field] !== "string" || !adventure[field].trim()) errors.push(`"${field}" fehlt oder ist leer`);
   });
   if (!Array.isArray(adventure.mood) || adventure.mood.length === 0) errors.push('"mood" muss eine nicht-leere Liste sein');
-  if (typeof adventure.beginnerFriendly !== "boolean") errors.push('"beginnerFriendly" muss true oder false sein');
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
+  if (adventure.tag !== undefined && (typeof adventure.tag !== "string" || !adventure.tag.trim())) errors.push('"tag" muss eine nicht-leere Zeichenkette sein');
   if (adventure.pageTheme !== undefined) {
     if (!adventure.pageTheme || typeof adventure.pageTheme !== "object" || Array.isArray(adventure.pageTheme)) {
       errors.push('"pageTheme" muss ein Objekt sein');
@@ -59,13 +59,19 @@ function imageMarkup(adventure, className, prefix = ".") {
   return `<img class="${className}" src="${escapeHtml(src)}" alt="${escapeHtml(adventure.image.alt || "")}"${position}>`;
 }
 
+function badgeMarkup(adventure) {
+  const badges = [];
+  if (adventure.tag) badges.push(`<span class="badge badge-status">${escapeHtml(adventure.tag)}</span>`);
+  return badges.length ? `<div class="badge-row">${badges.join("")}</div>` : "";
+}
+
 function renderCard(adventure) {
   const moods = adventure.mood.map((mood) => escapeHtml(mood)).join(" · ");
   return `
     <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
       ${imageMarkup(adventure, "card-image")}
       <div class="card-content">
-        ${adventure.beginnerFriendly ? '<span class="badge">Ideal zum Einsteigen</span>' : ""}
+        ${badgeMarkup(adventure)}
         <h3>${escapeHtml(adventure.title)}</h3>
         <p class="pitch">${escapeHtml(adventure.shortPitch)}</p>
         <div class="card-meta"><span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
@@ -121,7 +127,7 @@ function renderDetail(site, adventure) {
       ${imageMarkup(adventure, "detail-image", "..")}
       <a class="back" href="../index.html">← Alle Abenteuer</a>
       <div class="detail-hero-content">
-        ${adventure.beginnerFriendly ? '<span class="badge">Ideal zum Einsteigen</span>' : ""}
+        ${badgeMarkup(adventure)}
         <h1>${escapeHtml(adventure.title)}</h1><p class="pitch">${escapeHtml(adventure.shortPitch)}</p>
         <div class="moods">${adventure.mood.map(escapeHtml).join(" · ")}</div>
       </div>
