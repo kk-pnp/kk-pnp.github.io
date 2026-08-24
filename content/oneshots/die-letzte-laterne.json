@@ -14,5 +14,13 @@
   "characterCreation": "etwa 10 Minuten",
   "beginnerFriendly": true,
   "accent": "gold",
-  "image": null
+  "pageTheme": {
+    "background": "#efe5d0",
+    "mode": "light"
+  },
+  "image": {
+    "src": "assets/images/die-letzte-laterne.webp",
+    "alt": "Eine leuchtende Laterne vor einem Dorf am Waldrand",
+    "position": "50% 50%"
+  }
 }

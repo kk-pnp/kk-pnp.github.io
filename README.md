@@ -4,7 +4,7 @@ Eine statische Website für Pen-and-Paper-One-Shots. Jeder One-Shot liegt in ein
 
 ## Inhalte bearbeiten
 
-- Allgemeine Texte und Kontaktlink: `content/site.json`
+- Seitentitel und kurze Beschreibung: `content/site.json`
 - One-Shots: je eine Datei unter `content/oneshots/`
 - Gestaltung: `src/styles.css`
 
@@ -24,6 +24,22 @@ Für ein neues Abenteuer eine vorhandene JSON-Datei kopieren, umbenennen und die
 ```
 
 Ohne Bild zeigt die Karte automatisch eine farbige, atmosphärische Fläche. Empfehlenswert sind WebP- oder AVIF-Dateien im Querformat mit etwa 1600 × 1000 Pixeln und unter 500 KB.
+
+## Hintergrund der Detailseite bestimmen
+
+Jeder One-Shot kann eine eigene helle oder dunkle Detailseite bekommen:
+
+```json
+"pageTheme": {
+  "background": "#efe5d0",
+  "mode": "light"
+}
+```
+
+- `background`: sechsstellige Hex-Farbe, zum Beispiel `#efe5d0` oder `#071820`
+- `mode`: `light` für dunkle Schrift auf hellem Grund oder `dark` für helle Schrift auf dunklem Grund
+
+Wenn `pageTheme` fehlt, verwendet die Seite automatisch ein dunkles Standarddesign.
 
 ## Lokal prüfen
 

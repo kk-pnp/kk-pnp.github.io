@@ -28,6 +28,14 @@ function validateAdventure(adventure, filename) {
   if (typeof adventure.beginnerFriendly !== "boolean") errors.push('"beginnerFriendly" muss true oder false sein');
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
+  if (adventure.pageTheme !== undefined) {
+    if (!adventure.pageTheme || typeof adventure.pageTheme !== "object" || Array.isArray(adventure.pageTheme)) {
+      errors.push('"pageTheme" muss ein Objekt sein');
+    } else {
+      if (!/^#[0-9a-f]{6}$/i.test(adventure.pageTheme.background || "")) errors.push('"pageTheme.background" muss eine sechsstellige Hex-Farbe wie #efe5d0 sein');
+      if (!["light", "dark"].includes(adventure.pageTheme.mode)) errors.push('"pageTheme.mode" muss "light" oder "dark" sein');
+    }
+  }
   if (errors.length) throw new Error(`${filename}:\n- ${errors.join("\n- ")}`);
 }
 
@@ -49,7 +57,7 @@ function imageMarkup(adventure, className, prefix = ".") {
 function renderCard(adventure) {
   const moods = adventure.mood.map((mood) => escapeHtml(mood)).join(" · ");
   return `
-    <article class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" data-moods="${escapeHtml(adventure.mood.join(","))}">
+    <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
       ${imageMarkup(adventure, "card-image")}
       <div class="card-content">
         ${adventure.beginnerFriendly ? '<span class="badge">Ideal zum Einsteigen</span>' : ""}
@@ -58,8 +66,7 @@ function renderCard(adventure) {
         <div class="card-meta"><span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
         <div class="moods">${moods}</div>
       </div>
-      <a class="card-link" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html"><span class="sr-only">Details zu ${escapeHtml(adventure.title)}</span></a>
-    </article>`;
+    </a>`;
 }
 
 function pageHead({ title, description, cssPath, image }) {
@@ -81,33 +88,29 @@ function pageHead({ title, description, cssPath, image }) {
 }
 
 function renderIndex(site, adventures) {
-  const allMoods = [...new Set(adventures.flatMap((item) => item.mood))].sort((a, b) => a.localeCompare(b, "de"));
-  const filters = ["all", ...allMoods].map((mood, index) => `<button class="filter" type="button" data-filter="${escapeHtml(mood)}" aria-pressed="${index === 0}">${mood === "all" ? "Alle" : escapeHtml(mood)}</button>`).join("\n");
-  return `${pageHead({ title: `${site.title} – ${site.tagline}`, description: site.intro, cssPath: "./assets/styles.css" })}
+  return `${pageHead({ title: `${site.title} – ${site.tagline}`, description: site.description, cssPath: "./assets/styles.css" })}
 <body>
-  <header class="site-header shell"><a class="brand" href="./"><span>✦</span> ${escapeHtml(site.title)}</a><span class="header-note">${escapeHtml(site.tagline)}</span></header>
+  <header class="gallery-header shell">
+    <p class="kicker">${escapeHtml(site.tagline)}</p>
+    <h1>${escapeHtml(site.title)}</h1>
+  </header>
   <main>
-    <section class="hero shell"><p class="kicker">${escapeHtml(site.tagline)}</p><h1>${escapeHtml(site.title)}</h1><p class="hero-lead">${escapeHtml(site.intro)}</p></section>
-    <section class="shell" aria-labelledby="adventures-title">
-      <div class="section-head"><h2 id="adventures-title">Worauf hast du Lust?</h2><span class="count" data-count>${adventures.length} Abenteuer</span></div>
-      <div class="filters" aria-label="Abenteuer nach Stimmung filtern">${filters}</div>
+    <section class="shell" aria-label="Spielbare One-Shots">
       <div class="adventure-grid">${adventures.map(renderCard).join("\n")}</div>
     </section>
-    <aside class="host-note shell">${escapeHtml(site.hostNote)}</aside>
   </main>
-  <footer class="site-footer shell"><div><strong>${escapeHtml(site.contactLabel)}</strong><br>${escapeHtml(site.tagline)}</div><a class="contact-link" href="${escapeHtml(site.contactHref)}">${escapeHtml(site.contactText)} →</a></footer>
-  <script src="./assets/main.js" defer></script>
 </body>
 </html>`;
 }
 
 function renderDetail(site, adventure) {
+  const pageTheme = adventure.pageTheme || { background: "#111411", mode: "dark" };
   const facts = [
     ["Dauer", adventure.duration], ["Gruppe", adventure.players], ["Erfahrung", adventure.experience],
     ["Figuren", adventure.characterCreation], ...(adventure.system ? [["Regelsystem", adventure.system]] : [])
   ];
   return `${pageHead({ title: `${adventure.title} – ${site.title}`, description: adventure.shortPitch, cssPath: "../assets/styles.css", image: adventure.image?.src ? `../${adventure.image.src.replace(/^\.\//, "")}` : undefined })}
-<body>
+<body class="detail-page theme-${pageTheme.mode}" style="--page-bg:${pageTheme.background}">
   <main>
     <section class="detail-hero" data-accent="${escapeHtml(adventure.accent || "gold")}">
       ${imageMarkup(adventure, "detail-image", "..")}
@@ -128,7 +131,7 @@ function renderDetail(site, adventure) {
       <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>${adventure.contentNote ? `<p class="content-note"><strong>Hinweis:</strong> ${escapeHtml(adventure.contentNote)}</p>` : ""}</aside>
     </div>
   </main>
-  <footer class="site-footer shell"><a class="contact-link" href="../index.html">← Zurück zur Übersicht</a><a class="contact-link" href="${escapeHtml(site.contactHref)}">${escapeHtml(site.contactText)} →</a></footer>
+  <footer class="site-footer shell"><a class="contact-link" href="../index.html">← Zurück zur Übersicht</a></footer>
 </body>
 </html>`;
 }
@@ -157,8 +160,6 @@ async function build() {
   await mkdir(path.join(outputDir, "assets"), { recursive: true });
   await mkdir(path.join(outputDir, "abenteuer"), { recursive: true });
   await copyFile(path.join(root, "src", "styles.css"), path.join(outputDir, "assets", "styles.css"));
-  await copyFile(path.join(root, "src", "main.js"), path.join(outputDir, "assets", "main.js"));
-
   const imageDir = path.join(root, "assets", "images");
   try {
     if ((await stat(imageDir)).isDirectory()) await cp(imageDir, path.join(outputDir, "assets", "images"), { recursive: true });

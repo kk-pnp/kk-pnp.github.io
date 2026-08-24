@@ -15,5 +15,13 @@
   "beginnerFriendly": false,
   "contentNote": "Enge Räume, Dunkelheit und unterschwelliger Horror",
   "accent": "cyan",
-  "image": null
+  "pageTheme": {
+    "background": "#071820",
+    "mode": "dark"
+  },
+  "image": {
+    "src": "assets/images/signal-aus-der-tiefe.webp",
+    "alt": "Eine Forschungsstation und ein kleines Tauchboot in der dunklen Tiefsee",
+    "position": "50% 48%"
+  }
 }

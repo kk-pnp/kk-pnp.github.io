@@ -14,5 +14,9 @@
   "characterCreation": "etwa 15 Minuten",
   "beginnerFriendly": true,
   "accent": "coral",
+  "pageTheme": {
+    "background": "#241411",
+    "mode": "dark"
+  },
   "image": null
 }
