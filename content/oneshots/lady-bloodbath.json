@@ -4,14 +4,24 @@
   "order": 6,
   "layout": "wide",
   "shortPitch": "Entführt die Mutter des Gouverneurs von Cartagena – mit Seemannsgarn, Dreistigkeit und einem Plan, der kaum lange halten wird.",
-  "synopsis": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots in ganz unterschiedlichen Settings. Die Regeln sind schnell erklärt und werden derzeit noch ausprobiert und weiterentwickelt.\n\nIn Lady Bloodbath erhaltet ihr als Piratencrew einen ebenso einfachen wie riskanten Auftrag: Die Mutter des Gouverneurs von Cartagena soll entführt werden. Auf dem Weg dorthin könnt ihr Seemannsgarn über frühere Abenteuer erzählen – und mit euren erfundenen Geschichten die gemeinsame Spielwelt tatsächlich verändern. Was davon wahr ist, entscheidet sich oft erst in dem Moment, in dem es wichtig wird.",
-  "mood": ["piratig", "chaotisch", "actionreich"],
-  "characters": "Ihr erstellt eure Piratencrew gemeinsam zu Beginn. Die Figuren sind schnell gebaut und entstehen passend zu euren Ideen für die Gruppe.",
-  "rules": "Die Regeln sind sehr leicht und für chaotische, actionreiche und humorvolle One-Shots gemacht. Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem, das ich mit Spielerinnen und Spielern ausprobieren und gemeinsam verbessern möchte.",
+  "playerView": {
+    "who": "Du bist Teil einer Piratencrew, die ihr zu Beginn gemeinsam erstellt. Deine Figur ist schnell gebaut und bekommt genau die Talente, Schwächen und übertriebenen Geschichten, die zu eurer Mannschaft passen.",
+    "do": "Du versuchst mit deiner Crew, die Mutter des Gouverneurs von Cartagena zu entführen. Dafür braucht ihr Dreistigkeit, einen halbwegs brauchbaren Plan und die Bereitschaft, ihn sofort wieder über Bord zu werfen.",
+    "can": "Du kannst Seemannsgarn über vergangene Abenteuer erzählen und damit die gemeinsame Spielwelt beeinflussen. Ob deine Behauptung stimmt, zeigt sich häufig erst dann, wenn sie dringend wahr sein müsste."
+  },
+  "playedWith": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots. Die Regeln sind sehr leicht, schnell erklärt und werden mit Spielerinnen und Spielern ausprobiert und weiterentwickelt.",
+  "expectations": [
+    { "heading": "Ein riskanter Auftrag", "text": "Das Ziel ist klar, der Weg dorthin nicht. Ihr erkundet Cartagena, knüpft Kontakte und entscheidet selbst, ob euer Vorgehen eher raffiniert, laut oder vollständig größenwahnsinnig wird." },
+    { "heading": "Seemannsgarn wird Wirklichkeit", "text": "Eure erfundenen Heldentaten sind mehr als bloße Ausschmückung. Sie können neue Fakten schaffen und den Verlauf des Abenteuers in unerwartete Richtungen treiben." }
+  ],
+  "fitsIf": [
+    "du Piratenabenteuer mit viel Freiheit und hohem Tempo magst",
+    "du gerne große Behauptungen aufstellst und spontan darauf aufbaust",
+    "du mit einer Gruppe gemeinsam kreatives Chaos erzeugen möchtest"
+  ],
   "system": "Year Zero: Chaos Engine – in Entwicklung",
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig",
   "accent": "coral",
   "pageTheme": {
     "background": "#201316",

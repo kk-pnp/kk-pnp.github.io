@@ -5,15 +5,25 @@
   "layout": "standard",
   "tag": "Coming Soon",
   "shortPitch": "Pulpige Fantasy zwischen goldenen Metropolen und einer leibhaftigen Hölle, die beim Graben unter der Erde geweckt wurde.",
-  "synopsis": "Goldene Höllen ist ein größeres Rollenspielsystem, das ich derzeit auf Grundlage der Year Zero Engine entwickle. Es verbindet Fantasy mit Dieselpulp und dem Lebensgefühl der ersten Hälfte des 20. Jahrhunderts. Weil weite Teile der Oberfläche lebensfeindlich sind, bohrten sich die Menschen tief in die Erde, förderten seltene Metalle und andere Schätze und errichteten mit diesem Reichtum gewaltige Metropolen. Doch sie gruben zu tief und legten eine wirkliche, physische Hölle frei. Seitdem dringen von dort neue Gefahren nach oben – aber auch Gelegenheiten für alle, die bereit sind, noch tiefer hinabzusteigen.\n\nDas System soll eine breite Spanne von Abenteuern ermöglichen: aufregende Expeditionen in gefährliche Dungeons ebenso wie urbane Mystery-Geschichten zwischen Industrie, Magie und den Geheimnissen großer Städte. Umfangreiche Charakteroptionen sollen Figuren mit sehr unterschiedlichen Kräften, besonderen Fähigkeiten und mächtiger Magie ermöglichen. Konkrete Abenteuer sind noch in Entwicklung und werden später ergänzt.",
-  "mood": ["pulpig", "dämonisch", "abenteuerlich"],
-  "characters": "Goldene Höllen soll viele Möglichkeiten bieten, eigene Figuren mit deutlich unterschiedlichen Kräften, Fähigkeiten und Formen von Magie zu erschaffen. Die konkreten Optionen entstehen derzeit noch mit dem System.",
-  "rules": "Das Spiel wird umfangreicher und etwas crunchiger als meine kurzen One-Shot-Systeme. Es basiert auf der Year Zero Engine und soll genug spielerische Tiefe für besondere Fähigkeiten, Magie, Erkundung und unterschiedliche Abenteuerformen bieten.",
+  "playerView": {
+    "who": "Du spielst eine Figur in einer Welt zwischen Dieselpulp, Fantasy und den Folgen einer geöffneten Hölle. Unterschiedliche Charakteroptionen sollen sehr verschiedene Kräfte, Fähigkeiten und Formen von Magie ermöglichen.",
+    "do": "Du steigst in gefährliche Tiefen hinab, suchst nach seltenen Schätzen oder untersuchst Geheimnisse in gewaltigen Metropolen. Die konkreten Abenteuer befinden sich noch in Entwicklung.",
+    "can": "Du sollst besondere Fähigkeiten und mächtige Magie einsetzen und deine Figur deutlich weiterentwickeln können. Die genauen Optionen entstehen derzeit gemeinsam mit dem System."
+  },
+  "playedWith": "Goldene Höllen ist ein größeres Rollenspielsystem, das ich derzeit auf Grundlage der Year Zero Engine entwickle. Es verbindet Fantasy mit Dieselpulp und einer Welt, deren Menschen beim Graben nach seltenen Schätzen eine wirkliche, physische Hölle freigelegt haben.\n\nDas System wird umfangreicher und etwas crunchiger als meine kurzen One-Shot-Systeme und soll spielerische Tiefe für Fähigkeiten, Magie, Erkundung und sehr unterschiedliche Abenteuerformen bieten.",
+  "expectations": [
+    { "heading": "Dungeons unter einer feindlichen Welt", "text": "Expeditionen führen in gefährliche Tiefen, in denen höllische Bedrohungen und wertvolle Funde oft dicht beieinanderliegen." },
+    { "heading": "Mystery in goldenen Metropolen", "text": "Daneben soll das System urbane Geschichten zwischen Industrie, Magie, Macht und den Geheimnissen riesiger Städte ermöglichen." },
+    { "heading": "Noch in Entwicklung", "text": "Das System und die ersten konkreten Abenteuer entstehen derzeit. Diese Seite gibt deshalb zunächst einen Ausblick auf die geplante Spielwelt und ihre Möglichkeiten." }
+  ],
+  "fitsIf": [
+    "du pulpige Fantasy mit Industrie, Magie und höllischen Gefahren spannend findest",
+    "du Lust auf besondere Charakterfähigkeiten und etwas mehr spielerischen Crunch hast",
+    "du ein neues System während seiner Entwicklung kennenlernen möchtest"
+  ],
   "system": "Goldene Höllen – in Entwicklung",
   "duration": "Noch offen",
   "players": "Noch offen",
-  "experience": "Noch offen",
-  "contentNote": "Das System und die ersten konkreten Abenteuer sind noch in Entwicklung.",
   "accent": "gold",
   "pageTheme": {
     "background": "#211b13",

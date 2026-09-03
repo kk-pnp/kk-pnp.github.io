@@ -4,14 +4,24 @@
   "order": 4,
   "layout": "standard",
   "shortPitch": "Eine Druidenkommune, ein VW-Büsschen und ein Atomkraftwerk, das auf keinen Fall gebaut werden darf.",
-  "synopsis": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots in ganz unterschiedlichen Settings. Die Regeln sind schnell erklärt und werden derzeit noch ausprobiert und weiterentwickelt.\n\nIn Hippie-Druiden hat sich in den Siebzigern eine Kommune von Druiden der Hippiebewegung angeschlossen. Dabei ging der Großteil ihrer Magie verloren – nur die Fähigkeit, sich mehr schlecht als recht in Tiere zu verwandeln, ist ihnen geblieben. Mit ihrem VW-Büsschen machen sie sich auf den Weg, um den Bau eines Atomkraftwerks zu verhindern. Mit Protest, Verwandlungen und improvisierten Plänen stellen sie sich den Verantwortlichen entgegen.",
-  "mood": ["absurd", "chaotisch", "humorvoll"],
-  "characters": "Ihr erstellt eure Druiden gemeinsam zu Beginn und entscheidet, welche Macken, Fähigkeiten und etwas missglückten Tierverwandlungen sie mitbringen.",
-  "rules": "Die Regeln sind sehr leicht und für chaotische, actionreiche und humorvolle One-Shots gemacht. Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem, das ich mit Spielerinnen und Spielern ausprobieren und gemeinsam verbessern möchte.",
+  "playerView": {
+    "who": "Du gehörst zu einer Druidenkommune, die sich in den Siebzigern der Hippiebewegung angeschlossen hat. Deine Figur und ihre Macken entstehen gemeinsam mit der Gruppe.",
+    "do": "Du fährst mit den anderen im VW-Büsschen los, um den Bau eines Atomkraftwerks zu verhindern. Dafür greifst du auf Protest, Improvisation und ziemlich fragwürdige Pläne zurück.",
+    "can": "Von der alten Magie ist vor allem die Fähigkeit geblieben, dich mehr schlecht als recht in Tiere zu verwandeln. Gerade die unvollkommenen Verwandlungen eröffnen unerwartete Lösungen – und neue Probleme."
+  },
+  "playedWith": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots. Die Regeln sind sehr leicht, schnell erklärt und werden mit Spielerinnen und Spielern ausprobiert und weiterentwickelt.",
+  "expectations": [
+    { "heading": "Protest auf vier Rädern", "text": "Der gemeinsame Weg zum geplanten Atomkraftwerk liefert die Ausgangslage für Begegnungen, Diskussionen und einen Plan, der sich vermutlich mehrfach verändern wird." },
+    { "heading": "Improvisiertes Chaos", "text": "Tierverwandlungen, spontane Einfälle und die Eigenheiten eurer Kommune treiben das Abenteuer an. Scheitern beendet eine Idee selten – meistens macht es sie nur komplizierter." }
+  ],
+  "fitsIf": [
+    "du absurde Ausgangslagen mit einem etwas ernsteren Kern magst",
+    "du gerne improvisierst und auch über misslungene Pläne lachen kannst",
+    "du ein sehr leichtes, noch in Entwicklung befindliches System testen möchtest"
+  ],
   "system": "Year Zero: Chaos Engine – in Entwicklung",
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig",
   "accent": "moss",
   "pageTheme": {
     "background": "#dce8bd",

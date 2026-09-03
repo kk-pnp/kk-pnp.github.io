@@ -68,7 +68,10 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .badge-status { border-color: transparent; color: #111411; background: var(--accent); }
 .card h3 { margin: 0; max-width: 13ch; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 500; }
 .pitch { max-width: 45rem; margin: .9rem 0 1.1rem; color: #d3cdc1; }
-.card-meta, .moods { display: flex; flex-wrap: wrap; gap: .45rem .8rem; color: var(--muted); font-size: .83rem; }
+.pitch-quote { display: grid; gap: .35rem; padding-left: 1rem; border-left: 2px solid var(--accent); }
+.pitch-quote blockquote { margin: 0; font-family: ui-serif, Georgia, Cambria, serif; font-size: 1.08em; font-style: italic; line-height: 1.35; }
+.pitch-quote figcaption { color: var(--accent); font-size: .72rem; font-style: normal; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.card-meta { display: flex; flex-wrap: wrap; gap: .45rem .8rem; color: var(--muted); font-size: .83rem; }
 .card-meta span + span::before { content: "·"; margin-right: .8rem; color: var(--accent); }
 .card:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
 .site-footer { display: flex; justify-content: space-between; gap: 2rem; align-items: end; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); }
@@ -86,17 +89,33 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .back:hover { color: var(--accent); }
 .detail-hero h1 { max-width: 13ch; font-size: clamp(3.3rem, 11vw, 8rem); }
 .detail-hero .pitch { max-width: 700px; font-size: clamp(1.05rem, 2vw, 1.35rem); }
-.detail-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(17rem, .7fr); gap: clamp(2rem, 8vw, 7rem); padding-block: clamp(3.5rem, 8vw, 7rem); }
-.story section + section { margin-top: 4rem; }
+.detail-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(17rem, .7fr); column-gap: clamp(2rem, 8vw, 7rem); row-gap: 2rem; padding-block: clamp(3.5rem, 8vw, 7rem); }
+.you-panel { grid-column: 1; grid-row: 1; padding: clamp(1.4rem, 4vw, 2.25rem); border: 1px solid var(--line); border-radius: 1.25rem; background: var(--surface); }
+.you-panel > h2 { margin: 0 0 1.8rem; font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 500; }
+.you-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+.you-grid section { min-width: 0; padding-right: 1.25rem; }
+.you-grid section + section { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.you-grid h3 { margin: 0 0 .75rem; color: var(--accent); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; font-weight: 800; letter-spacing: .08em; line-height: 1.3; text-transform: uppercase; }
+.you-grid p { margin: 0; color: var(--ink); opacity: .86; font-size: .96rem; }
+.story { grid-column: 1; grid-row: 2; }
+.story-section { padding-block: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--line); }
 .story h2 { margin: 0 0 1rem; font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 500; }
 .story p { color: var(--ink); opacity: .86; font-size: 1.08rem; }
-.facts { position: sticky; top: 1rem; align-self: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+.system-name { margin: 0 0 1rem; color: var(--accent) !important; opacity: 1 !important; font-family: ui-serif, Georgia, Cambria, serif; font-size: clamp(1.35rem, 2.7vw, 1.8rem) !important; line-height: 1.2; }
+.expectation-block + .expectation-block { margin-top: 2.25rem; }
+.expectation-block h3 { margin: 0 0 .65rem; font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
+.expectation-block p { margin-block: .5rem; }
+.facts { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 1rem; align-self: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
 .facts h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 .facts dl { margin: 0; }
 .facts div { display: grid; gap: .1rem; padding: .85rem 0; border-top: 1px solid var(--line); }
 .facts dt { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
 .facts dd { margin: 0; }
-.content-note { margin-top: 1.2rem; padding: 1rem; border-radius: .6rem; background: color-mix(in srgb, var(--accent) 10%, transparent); color: #d7d0c5; font-size: .88rem; }
+.facts-fit { margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.facts-fit h3 { margin: 0 0 .9rem; font-size: 1.2rem; font-weight: 500; line-height: 1.2; }
+.facts-fit ul { display: grid; gap: .65rem; margin: 0; padding: 0; list-style: none; }
+.facts-fit li { position: relative; padding-left: 1.25rem; color: var(--ink); opacity: .86; font-size: .9rem; line-height: 1.45; }
+.facts-fit li::before { content: "✦"; position: absolute; left: 0; color: var(--accent); font-size: .7rem; }
 .adventure-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding-bottom: 3rem; }
 .adventure-nav-link { display: grid; gap: .35rem; min-height: 7rem; padding: 1.2rem 1.35rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
 .adventure-nav-link:hover { border-color: color-mix(in srgb, var(--accent, var(--gold)) 55%, transparent); transform: translateY(-2px); }
@@ -131,7 +150,7 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
   .card-content { padding: 1.25rem; }
   .card h3 { max-width: 12ch; font-size: clamp(2.15rem, 11vw, 3.1rem); overflow-wrap: anywhere; }
   .pitch { margin: .7rem 0 .9rem; }
-  .card-meta, .moods { font-size: .78rem; }
+  .card-meta { font-size: .78rem; }
 
   .detail-hero { min-height: clamp(34rem, 78svh, 42rem); }
   .detail-hero-content { width: min(calc(100% - 1.25rem), var(--max)); padding: 7rem 0 2.5rem; }
@@ -139,9 +158,15 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
   .detail-hero .pitch { font-size: 1rem; }
   .back { top: 1rem; left: .625rem; padding: .4rem 0; }
 
-  .detail-layout { grid-template-columns: minmax(0, 1fr); gap: 2.75rem; padding-block: 2.5rem 3.5rem; }
-  .facts { position: static; order: -1; }
-  .story section + section { margin-top: 3rem; }
+  .detail-layout { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding-block: 1.25rem 3.5rem; }
+  .you-panel, .facts, .story { grid-column: 1; grid-row: auto; }
+  .you-panel { padding: 1.25rem; }
+  .you-panel > h2 { margin-bottom: 1.35rem; font-size: clamp(2rem, 10vw, 2.8rem); }
+  .you-grid { grid-template-columns: 1fr; }
+  .you-grid section { padding: 0; }
+  .you-grid section + section { margin-top: 1.25rem; padding: 1.25rem 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .facts { position: static; }
+  .story-section { padding-block: 2.75rem; }
   .story h2 { font-size: clamp(1.9rem, 9vw, 2.55rem); }
   .story p { font-size: 1rem; }
 

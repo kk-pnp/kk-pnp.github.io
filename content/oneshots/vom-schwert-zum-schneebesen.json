@@ -4,14 +4,24 @@
   "order": 7,
   "layout": "standard",
   "shortPitch": "Ein leichtes Fantasy-Abenteuer für alle, die Heldenmut auch abseits des Schlachtfelds beweisen wollen.",
-  "synopsis": "Tiny D6 ist ein bewusst schlankes Rollenspielsystem. Figuren sind schnell erstellt, die Regeln leicht erklärt und im Mittelpunkt stehen eure Ideen und die gemeinsame Geschichte statt langer Regelpausen.\n\nVom Schwert zum Schneebesen ist noch in Arbeit. Weitere Informationen zur Ausgangslage und dazu, was euch in diesem Abenteuer erwartet, folgen noch.",
-  "mood": ["abenteuerlich", "leicht", "humorvoll"],
-  "characters": "Ihr erstellt eure Figuren gemeinsam vor dem Start. Das geht schnell und gibt euch trotzdem genug Raum für eigene Ideen.",
-  "rules": "Die Regeln sind sehr einfach und werden direkt beim Spielen erklärt. Vorkenntnisse braucht ihr nicht.",
+  "playerView": {
+    "who": "Du spielst eine selbst erstellte Fantasyfigur, die ihr gemeinsam vor dem Start entwickelt. Das geht schnell und lässt trotzdem genug Raum für eigene Ideen.",
+    "do": "Welche Aufgabe dich vom Schwert zum Schneebesen führt, wird noch ergänzt. Fest steht: Heldenmut ist diesmal auch abseits des Schlachtfelds gefragt.",
+    "can": "Du setzt die wenigen, klaren Fähigkeiten deiner Figur ein und kannst dich ganz auf kreative Lösungen und die gemeinsame Geschichte konzentrieren."
+  },
+  "playedWith": "Tiny D6 ist ein bewusst schlankes Rollenspielsystem. Figuren sind schnell erstellt, die Regeln leicht erklärt und im Mittelpunkt stehen eure Ideen und die gemeinsame Geschichte statt langer Regelpausen. Vorkenntnisse braucht ihr nicht.",
+  "expectations": [
+    { "heading": "Noch in Arbeit", "text": "Weitere Informationen zur Ausgangslage und zu den konkreten Herausforderungen des Abenteuers folgen noch." },
+    { "heading": "Leichte Fantasy", "text": "Geplant ist ein zugänglicher Abend, bei dem eigene Ideen, Humor und gemeinsames Problemlösen wichtiger sind als lange Regelpassagen." }
+  ],
+  "fitsIf": [
+    "du unkomplizierte Fantasy und ein leichtes Regelsystem suchst",
+    "du gerne eigene Figuren erstellst, ohne lange Werte zu verteilen",
+    "du Heldenmut auch einmal abseits klassischer Schlachten erleben möchtest"
+  ],
   "system": "Tiny D6",
   "duration": "etwa 3–4 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig",
   "accent": "gold",
   "pageTheme": {
     "background": "#0e4a5a",

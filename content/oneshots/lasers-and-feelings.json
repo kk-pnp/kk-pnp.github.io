@@ -4,14 +4,24 @@
   "order": 1,
   "layout": "standard",
   "shortPitch": "Eine schnelle, chaotische Weltraumreise zwischen Lasern und großen Gefühlen.",
-  "synopsis": "Lasers & Feelings ist ein sehr kurzes Science-Fiction-Rollenspiel, bei dem eure Figuren zwischen kühlem, technischem Handeln und spontanem, emotionalem Handeln hin- und hergerissen sind. Die einfachen Regeln lassen viel Raum für schnelle Ideen, dramatische Wendungen und herrlichen Weltraumquatsch.\n\nEs gibt kein fest vorgegebenes Abenteuer: Ihr seid die Crew eines Raumschiffs und geratet gemeinsam in eine improvisierte Mission. Welches Problem im All auf euch wartet, entsteht aus euren Figuren, euren Ideen und den Entscheidungen am Spieltisch – von außerirdischen Begegnungen bis zu dramatischen Notfällen an Bord.",
-  "mood": ["chaotisch", "lustig", "science-fiction"],
-  "characters": "Ihr erstellt eure Crew gemeinsam zu Beginn. Das dauert nur wenige Minuten und besteht aus einigen einfachen Entscheidungen darüber, wer ihr seid und was euch auszeichnet.",
-  "rules": "Die Regeln sind extrem kurz und werden direkt beim Spielen erklärt. Ihr braucht nur normale sechsseitige Würfel und keinerlei Vorkenntnisse.",
+  "playerView": {
+    "who": "Du bist Teil der Crew eines Raumschiffs. Deine Rolle, dein Stil und deine Beziehungen zu den anderen Crewmitgliedern legt ihr in wenigen Minuten gemeinsam fest.",
+    "do": "Du gerätst mit der Crew in eine improvisierte Mission voller Notfälle, fremder Wesen und überraschender Wendungen. Was genau im All passiert, entsteht erst am Spieltisch.",
+    "can": "Du löst Probleme entweder mit kühlem, technischem Handeln oder mit spontanem, emotionalem Einsatz. Gute Ideen und mutige Entscheidungen zählen mehr als Regelwissen."
+  },
+  "playedWith": "Lasers & Feelings ist ein sehr kurzes Science-Fiction-Rollenspiel über eine Raumschiffcrew zwischen kosmischen Gefahren, persönlichen Beziehungen und herrlichem Weltraumquatsch. Ein fest vorgegebenes Abenteuer gibt es nicht: Mission und Konflikte entstehen aus euren Figuren und Ideen.\n\nDie Regeln werden direkt beim Spielen erklärt. Ihr braucht nur normale sechsseitige Würfel und keinerlei Vorkenntnisse.",
+  "expectations": [
+    { "heading": "Improvisierte Weltraummission", "text": "Die Ausgangslage wird gemeinsam erzeugt. Dadurch kann der Abend von einer außerirdischen Begegnung bis zu einem dramatischen Notfall an Bord führen." },
+    { "heading": "Schnell, chaotisch und persönlich", "text": "Neben Lasern, Technik und riskanten Manövern geht es immer auch um Gefühle, Beziehungen und die Frage, wie eure Crew unter Druck miteinander umgeht." }
+  ],
+  "fitsIf": [
+    "du gerne improvisierst und dich auf unerwartete Wendungen einlässt",
+    "du Science-Fiction mit Humor und großen Gefühlen magst",
+    "du ein sehr leichtes Regelsystem ohne Vorbereitung ausprobieren möchtest"
+  ],
   "system": "Lasers & Feelings",
   "duration": "2–3 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig",
   "accent": "cyan",
   "pageTheme": {
     "background": "#0b1324",

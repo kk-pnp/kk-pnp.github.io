@@ -16,6 +16,15 @@ Ein optionaler Hinweis wie „Coming Soon“ erscheint auf der Übersicht und de
 "tag": "Coming Soon"
 ```
 
+Ein `shortPitch` kann optional als Zitat gestaltet werden. Sobald `shortPitchAuthor` gesetzt ist, erscheinen Text und Urheber automatisch im Zitatlayout:
+
+```json
+"shortPitch": "Die älteste und stärkste Emotion der Menschheit ist die Angst.",
+"shortPitchAuthor": "H. P. Lovecraft"
+```
+
+Ohne `shortPitchAuthor` wird `shortPitch` weiterhin als normaler Untertext dargestellt.
+
 Die Reihenfolge und Kartenbreite lassen sich ebenfalls pro Abenteuer festlegen:
 
 ```json
@@ -24,6 +33,33 @@ Die Reihenfolge und Kartenbreite lassen sich ebenfalls pro Abenteuer festlegen:
 ```
 
 `layout` kann `standard` oder `wide` sein. Die Links zum vorherigen und nächsten Abenteuer folgen automatisch der mit `order` festgelegten Reihenfolge.
+
+### Aufbau einer Abenteuerseite
+
+Die ausführlichen Inhalte einer Seite werden mit diesen Feldern gepflegt:
+
+```json
+"playerView": {
+  "who": "Wer bin ich?",
+  "do": "Was mache ich?",
+  "can": "Was kann ich?"
+},
+"playedWith": "Kurze Erklärung des Regelsystems.",
+"expectations": [
+  {
+    "heading": "Optionale Zwischenüberschrift",
+    "text": "Ein oder mehrere Absätze darüber, was die Gruppe erwartet."
+  }
+],
+"fitsIf": [
+  "du diese Art von Abenteuer magst",
+  "du dich auf diesen Spielstil einlassen möchtest"
+]
+```
+
+Unter `expectations` können beliebig viele Blöcke ergänzt werden. `heading` ist optional; `text` ist immer erforderlich. Innerhalb längerer Texte erzeugt eine Leerzeile einen neuen Absatz.
+
+Die Box „Auf einen Blick“ zeigt automatisch `system`, `duration` und `players`. Darunter erscheinen die zwei bis vier Einträge aus `fitsIf`. Inhaltshinweise gehören als eigener Block unter `expectations`.
 
 ## Bilder ergänzen
 

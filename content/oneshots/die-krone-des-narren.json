@@ -4,14 +4,24 @@
   "order": 3,
   "layout": "wide",
   "shortPitch": "Die Krone eures Königs wurde gestohlen – und ihre Spur führt in ein verdrehtes Schloss voller Narren und gefährlicher Spiele.",
-  "synopsis": "Fabula Ultima ist ein Fantasy-Rollenspiel, das von japanischen Videorollenspielen inspiriert ist. Gemeinsam erzählt ihr große Geschichten über aufstrebende Heldinnen und Helden, mächtige Gegenspieler, fantastische Welten, ungewöhnliche Monster und dramatische Kämpfe.\n\nIn Die Krone des Narren arbeitet ihr im Dienst eines Königs, dessen Krone gestohlen wurde. Um sie zurückzubringen, betretet ihr ein stilisiertes, überzeichnetes Parallelweltschloss wie aus einem japanischen Fantasy-Videospiel. Hinter seinen Türen lauern Gestalten und Gefahren rund um Narren, Clowns und höfische Maskenspiele. Euch erwarten fantastische Orte, spannende Kämpfe und trickreiche Rätsel.",
-  "mood": ["heroisch", "fantastisch", "verspielt"],
-  "characters": "Es gibt eine Auswahl vorbereiteter Heldinnen und Helden. Ihr sucht euch eine Figur aus und passt sie anschließend mit einigen eigenen Entscheidungen an.",
-  "rules": "Fabula Ultima bietet verschiedene Fähigkeiten, Spielwerte und taktische Möglichkeiten und ist deshalb etwas regelintensiver. Ihr solltet Lust darauf haben, euch auf einige Regeln einzulassen. Auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen; alles für eure Figuren Wichtige gehen wir gemeinsam durch.",
+  "playerView": {
+    "who": "Du bist eine Heldin oder ein Held im Dienst eines Königs. Du wählst eine vorbereitete Figur und passt sie anschließend mit einigen eigenen Entscheidungen an.",
+    "do": "Du folgst der Spur einer gestohlenen Krone in ein verzerrtes Parallelweltschloss. Dort stellst du dich den Spielen, Rätseln und Wächtern eines närrischen Hofstaats.",
+    "can": "Deine Figur besitzt besondere Fähigkeiten für Erkundung und Kampf. Im Team verbindet ihr eure Stärken, setzt spektakuläre Aktionen ein und findet kreative Wege durch die Hindernisse des Schlosses."
+  },
+  "playedWith": "Fabula Ultima ist ein Fantasy-Rollenspiel, das von japanischen Videorollenspielen inspiriert ist. Gemeinsam erzählt ihr große Geschichten über aufstrebende Heldinnen und Helden, mächtige Gegenspieler, fantastische Welten und ungewöhnliche Monster.\n\nDas System bietet verschiedene Fähigkeiten, Spielwerte und taktische Möglichkeiten und ist deshalb etwas regelintensiver. Ihr solltet Lust auf einige Regeln haben; auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen. Alles für eure Figuren Wichtige gehen wir gemeinsam durch.",
+  "expectations": [
+    { "heading": "Ein Schloss wie aus einem JRPG", "text": "Die Suche führt durch fantastische, stilisierte Orte voller Narren, Clowns und höfischer Maskenspiele. Jede neue Tür kann einen weiteren überzeichneten Einfall verbergen." },
+    { "heading": "Kämpfe und Rätsel", "text": "Euch erwarten mehrere dramatische Auseinandersetzungen und trickreiche Aufgaben, bei denen nicht nur gute Werte, sondern auch Zusammenarbeit und Ideen gefragt sind." }
+  ],
+  "fitsIf": [
+    "du klassische JRPG-Fantasy und überzeichnete Schauplätze magst",
+    "du Lust auf besondere Fähigkeiten und taktische Kämpfe hast",
+    "du trotz etwas mehr Regeln auch Rätsel und gemeinsames Erzählen suchst"
+  ],
   "system": "Fabula Ultima",
   "duration": "4–5 Stunden",
   "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig; etwas Regellust hilfreich",
   "accent": "coral",
   "pageTheme": {
     "background": "#35142b",

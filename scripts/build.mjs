@@ -21,7 +21,7 @@ const renderParagraphs = (value = "") => String(value)
   .map((paragraph) => `<p>${escapeHtml(paragraph.replace(/\s*\r?\n\s*/g, " "))}</p>`)
   .join("");
 
-const requiredStrings = ["slug", "title", "shortPitch", "synopsis", "characters", "rules", "duration", "players", "experience"];
+const requiredStrings = ["slug", "title", "shortPitch", "playedWith", "duration", "players"];
 const allowedAccents = new Set(["gold", "cyan", "coral", "moss"]);
 
 function validateAdventure(adventure, filename) {
@@ -29,7 +29,31 @@ function validateAdventure(adventure, filename) {
   requiredStrings.forEach((field) => {
     if (typeof adventure[field] !== "string" || !adventure[field].trim()) errors.push(`"${field}" fehlt oder ist leer`);
   });
-  if (!Array.isArray(adventure.mood) || adventure.mood.length === 0) errors.push('"mood" muss eine nicht-leere Liste sein');
+  if (adventure.shortPitchAuthor !== undefined && (typeof adventure.shortPitchAuthor !== "string" || !adventure.shortPitchAuthor.trim())) {
+    errors.push('"shortPitchAuthor" muss eine nicht-leere Zeichenkette sein');
+  }
+  if (!adventure.playerView || typeof adventure.playerView !== "object" || Array.isArray(adventure.playerView)) {
+    errors.push('"playerView" muss ein Objekt sein');
+  } else {
+    [["who", "Wer bin ich?"], ["do", "Was mache ich?"], ["can", "Was kann ich?"]].forEach(([field, label]) => {
+      if (typeof adventure.playerView[field] !== "string" || !adventure.playerView[field].trim()) errors.push(`"playerView.${field}" (${label}) fehlt oder ist leer`);
+    });
+  }
+  if (!Array.isArray(adventure.expectations) || adventure.expectations.length === 0) {
+    errors.push('"expectations" muss eine nicht-leere Liste sein');
+  } else {
+    adventure.expectations.forEach((section, index) => {
+      if (!section || typeof section !== "object" || Array.isArray(section)) {
+        errors.push(`"expectations[${index}]" muss ein Objekt sein`);
+        return;
+      }
+      if (typeof section.text !== "string" || !section.text.trim()) errors.push(`"expectations[${index}].text" fehlt oder ist leer`);
+      if (section.heading !== undefined && (typeof section.heading !== "string" || !section.heading.trim())) errors.push(`"expectations[${index}].heading" muss eine nicht-leere Zeichenkette sein`);
+    });
+  }
+  if (!Array.isArray(adventure.fitsIf) || adventure.fitsIf.length < 2 || adventure.fitsIf.length > 4 || adventure.fitsIf.some((item) => typeof item !== "string" || !item.trim())) {
+    errors.push('"fitsIf" muss eine Liste aus zwei bis vier Texten sein');
+  }
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
   if (adventure.tag !== undefined && (typeof adventure.tag !== "string" || !adventure.tag.trim())) errors.push('"tag" muss eine nicht-leere Zeichenkette sein');
@@ -67,19 +91,26 @@ function badgeMarkup(adventure) {
   return badges.length ? `<div class="badge-row">${badges.join("")}</div>` : "";
 }
 
+function shortPitchMarkup(adventure) {
+  if (!adventure.shortPitchAuthor) return `<p class="pitch">${escapeHtml(adventure.shortPitch)}</p>`;
+  return `<figure class="pitch pitch-quote"><blockquote>„${escapeHtml(adventure.shortPitch)}“</blockquote><figcaption>— ${escapeHtml(adventure.shortPitchAuthor)}</figcaption></figure>`;
+}
+
 function renderCard(adventure) {
-  const moods = adventure.mood.map((mood) => escapeHtml(mood)).join(" · ");
   return `
     <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" data-layout="${escapeHtml(adventure.layout || "standard")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
       ${imageMarkup(adventure, "card-image")}
       <div class="card-content">
         ${badgeMarkup(adventure)}
         <h3>${escapeHtml(adventure.title)}</h3>
-        <p class="pitch">${escapeHtml(adventure.shortPitch)}</p>
+        ${shortPitchMarkup(adventure)}
         <div class="card-meta">${adventure.system ? `<span>${escapeHtml(adventure.system)}</span>` : ""}<span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
-        <div class="moods">${moods}</div>
       </div>
     </a>`;
+}
+
+function renderExpectations(expectations) {
+  return expectations.map((section) => `<section class="expectation-block">${section.heading ? `<h3>${escapeHtml(section.heading)}</h3>` : ""}${renderParagraphs(section.text)}</section>`).join("");
 }
 
 function renderAdventureNavigation(previousAdventure, nextAdventure) {
@@ -129,8 +160,8 @@ function renderIndex(site, adventures) {
 function renderDetail(site, adventure, previousAdventure, nextAdventure) {
   const pageTheme = adventure.pageTheme || { background: "#111411", mode: "dark" };
   const facts = [
-    ["Dauer", adventure.duration], ["Gruppe", adventure.players], ["Erfahrung", adventure.experience],
-    ...(adventure.system ? [["Regelsystem", adventure.system]] : [])
+    ...(adventure.system ? [["System", adventure.system]] : []),
+    ["Dauer", adventure.duration], ["Gruppe", adventure.players]
   ];
   return `${pageHead({ title: `${adventure.title} – ${site.title}`, description: adventure.shortPitch, cssPath: "../assets/styles.css", image: adventure.image?.src ? `../${adventure.image.src.replace(/^\.\//, "")}` : undefined })}
 <body class="detail-page theme-${pageTheme.mode}" style="--page-bg:${pageTheme.background}">
@@ -140,17 +171,24 @@ function renderDetail(site, adventure, previousAdventure, nextAdventure) {
       <a class="back" href="../index.html">← Alle Abenteuer</a>
       <div class="detail-hero-content">
         ${badgeMarkup(adventure)}
-        <h1>${escapeHtml(adventure.title)}</h1><p class="pitch">${escapeHtml(adventure.shortPitch)}</p>
-        <div class="moods">${adventure.mood.map(escapeHtml).join(" · ")}</div>
+        <h1>${escapeHtml(adventure.title)}</h1>${shortPitchMarkup(adventure)}
       </div>
     </section>
     <div class="detail-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}">
+      <section class="you-panel">
+        <p class="kicker">Deine Rolle im Abenteuer</p>
+        <h2>Du in „${escapeHtml(adventure.title)}“</h2>
+        <div class="you-grid">
+          <section><h3>Wer bin ich?</h3>${renderParagraphs(adventure.playerView.who)}</section>
+          <section><h3>Was mache ich?</h3>${renderParagraphs(adventure.playerView.do)}</section>
+          <section><h3>Was kann ich?</h3>${renderParagraphs(adventure.playerView.can)}</section>
+        </div>
+      </section>
+      <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl><section class="facts-fit"><h3>Passt gut zu dir, wenn …</h3><ul>${adventure.fitsIf.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section></aside>
       <article class="story">
-        <section><h2>Worum geht es?</h2>${renderParagraphs(adventure.synopsis)}</section>
-        <section><p class="kicker">Eure Figuren</p><h2>Wen spielt ihr?</h2><p>${escapeHtml(adventure.characters)}</p></section>
-        <section><p class="kicker">Ganz ohne Vorwissen</p><h2>Wie funktionieren die Regeln?</h2><p>${escapeHtml(adventure.rules)}</p></section>
+        <section class="story-section played-with"><p class="kicker">Das Regelsystem</p><h2>Gespielt mit</h2><p class="system-name">${escapeHtml(adventure.system || "Wird noch ergänzt")}</p>${renderParagraphs(adventure.playedWith)}</section>
+        <section class="story-section"><p class="kicker">Am Spieltisch</p><h2>Was erwartet euch?</h2><div class="expectations">${renderExpectations(adventure.expectations)}</div></section>
       </article>
-      <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl>${adventure.contentNote ? `<p class="content-note"><strong>Hinweis:</strong> ${escapeHtml(adventure.contentNote)}</p>` : ""}</aside>
     </div>
     ${renderAdventureNavigation(previousAdventure, nextAdventure)}
   </main>

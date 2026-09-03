@@ -4,15 +4,25 @@
   "order": 2,
   "layout": "standard",
   "shortPitch": "Nordischer Horror im 20. Jahrhundert",
-  "synopsis": "Vaesen bietet ein dunkles, schauerliches Setting, durchdrungen von nordischer Folklore und den alten Mythen Skandinaviens. Die Spielercharaktere können durch eine besondere Gabe, 'den Blick', die sogenannten Vaesen sehen. Sie untersuchen mysteriöse Vorfälle und alte Sagen, um die Motive dieser mächtigen Wesen zu verstehen und ihnen mit Ritualen, Wissen oder Verhandlungen zu begegnen. \n \n Im Einsteigerabenteuer „Der Tanz der Träume“ werden die Charaktere von einem anonymen Auftraggeber in das abgelegene Gasthaus „Hexenkatze“ gebeten, um Informationen auszutauschen. Doch schon bald geraten sie immer tiefer in die düsteren Geheimnisse der heruntergekommenen Gaststätte und ihrer Bewohner.",
-  "mood": ["Horror", "Skandinavien", "Mysterien", "20. Jahrhundert"],
-  "characters": "Ihr seid normale Mitglieder der Gesellschaft des Schwedens des 20. Jahrhunderts, die sich einer Geheimgesellschaft angeschlossen haben, nachdem sie 'den Blick' erhalten haben. Je nach Gruppe und Zeit kann hier aus vorgefertigten Charakteren gewählt werden oder eine schnelle Charaktererschaffung durchgeführt werden.",
-  "rules": "Das System ist leicht zu erlernen, gespielt wird nur mit normalen D6 Würfeln.",
+  "playerView": {
+    "who": "Du bist ein Mitglied der schwedischen Gesellschaft des 20. Jahrhunderts und besitzt den Blick: die seltene Gabe, übernatürliche Vaesen wahrzunehmen. Dieser Blick hat dich zu einer Geheimgesellschaft geführt.",
+    "do": "Du untersuchst mit deiner Gruppe die heruntergekommene Hexenkatze, sprichst mit ihren Bewohnern und versuchst herauszufinden, welches alte Geheimnis hinter den beunruhigenden Ereignissen steckt.",
+    "can": "Du beobachtest, kombinierst Hinweise und greifst auf Wissen, Beziehungen und persönliche Talente zurück. Vaesen lassen sich oft nicht einfach besiegen – Rituale, Verhandlungen und das Verständnis ihrer Motive sind entscheidend."
+  },
+  "playedWith": "Vaesen bietet ein dunkles, schauerliches Setting, durchdrungen von nordischer Folklore und den alten Mythen Skandinaviens. Mächtige Wesen leben verborgen neben den Menschen und folgen ihren eigenen Regeln, Traditionen und Bedürfnissen.\n\nDas System ist leicht zu erlernen und wird mit normalen sechsseitigen Würfeln gespielt. Je nach Gruppe und verfügbarer Zeit wählt ihr vorbereitete Figuren oder erstellt eure Charaktere gemeinsam vor dem Start.",
+  "expectations": [
+    { "heading": "Ein abgelegenes Gasthaus", "text": "Ein anonymer Auftraggeber bittet euch in die Hexenkatze, um Informationen auszutauschen. Schon bald zieht euch die heruntergekommene Gaststätte immer tiefer in die Geheimnisse ihrer Bewohner." },
+    { "heading": "Ermitteln statt Monsterjagd", "text": "Im Mittelpunkt stehen eine unheimliche Atmosphäre, Gespräche, Spuren und alte Überlieferungen. Gewalt ist möglich, aber selten die beste oder sicherste Antwort." },
+    { "heading": "Inhaltshinweis", "text": "Das Abenteuer enthält typische Horrorelemente, darunter auch etwas Body Horror und die Gefährdung eines Kindes. Die Darstellung bleibt dabei im Rahmen dessen, was für das Genre üblich ist, und wird nicht besonders explizit oder drastisch." }
+  ],
+  "fitsIf": [
+    "du nordische Folklore und düstere Mysterien magst",
+    "du lieber ermittelst und Zusammenhänge entdeckst als nur zu kämpfen",
+    "du dich auf eine langsamer wachsende Horroratmosphäre einlassen möchtest"
+  ],
   "system": "Vaesen",
   "duration": "3-4 Stunden",
   "players": "3–4 Personen",
-  "experience": "Keine Vorerfahrung nötig",
-  "contentNote": "Das Abenteuer enthält typische Horrorelemente, darunter auch etwas Body Horror und die Gefährdung eines Kindes. Die Darstellung bleibt dabei im Rahmen dessen, was für das Genre üblich ist, und wird nicht besonders explizit oder drastisch.",
   "accent": "moss",
   "pageTheme": {
     "background": "#0d2418",

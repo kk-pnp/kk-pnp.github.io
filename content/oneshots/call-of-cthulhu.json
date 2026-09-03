@@ -3,16 +3,36 @@
   "title": "Was ist im Keller?",
   "order": 5,
   "layout": "standard",
-  "shortPitch": "Ein Mord in einer abgelegenen Familienhütte – und eine Kellertreppe, hinter der die Vergangenheit der Blackwoods nicht ruhen will.",
-  "synopsis": "Call of Cthulhu ist ein Rollenspiel über Geheimnisse, Ermittlungen und kosmischen Horror. Ihr spielt gewöhnliche Menschen, die unerklärlichen Vorfällen nachgehen und dabei auf Wahrheiten stoßen, die besser verborgen geblieben wären.\n\nDer wohlhabende Anwalt Arthur Blackwood soll seine Frau Rose ermordet haben. Um Beweise für seine Unschuld zu finden, untersucht ihr die abgelegene Hütte seiner Familie. Im Keller stoßt ihr auf Spuren einer jahrhundertealten Familiengeschichte und Hinweise darauf, dass in der Mordnacht etwas Unmenschliches geschehen ist. Je tiefer ihr den Geheimnissen der Blackwoods folgt, desto deutlicher wird: Etwas im Dunkeln ist noch da – und es beginnt, auf euch aufmerksam zu werden.",
-  "mood": ["ermittelnd", "beklemmend", "kosmischer Horror"],
-  "characters": "Je nach Gruppe und verfügbarer Zeit wählt ihr aus vorbereiteten Figuren oder erstellt eure Charaktere gemeinsam vor dem Start.",
-  "rules": "Call of Cthulhu hat etwas mehr Regeln als die sehr leichten One-Shot-Systeme. Ihr solltet Lust darauf haben, euch auf einige Spielwerte und Regelmechaniken einzulassen. Auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen; alles Wichtige gehen wir gemeinsam durch.",
+  "shortPitch": "Die älteste und stärkste Emotion der Menschheit ist die Angst, und die älteste und stärkste Art der Angst ist die Angst vor dem Unbekannten.",
+  "shortPitchAuthor": "H. P. Lovecraft",
+  "playerView": {
+    "who": "Es sind die 1920ern in den USA. Du bist ein gewöhnlicher Mensch, der mit dem Übernatürlichen und Übermächtigen konfrotiert wird. Die Gruppe sind Bekannte von Arthur Blackwood, der beteuert, er würde zu unrecht verdächtigt, seine Frau ermordet zu haben. Je nach Gruppe und verfügbarer Zeit wählst du eine vorbereitete Figur oder erstellst deinen Charakter gemeinsam mit den anderen.",
+    "do": "Du sollst Beweise dafür finden, dass Arthur Blackwood seine Frau nicht ermordet hat. Dafür untersuchst du die abgelegene Familienhütte und vor allem ihren alten Keller.",
+    "can": "Du befragst Menschen, untersuchst Räume und setzt Hinweise zu einem Bild zusammen. Deine Figur besitzt alltägliche und berufliche Fähigkeiten. übernatürlichen Gefahren begegnet sie als verletzlicher Mensch."
+  },
+  "playedWith": "Call of Cthulhu ist das bekannteste Horror-Rollenspiel. Es basiert auf dem Cthulhu-Mythos von H. P. Lovecraft und spielt typischerweise im frühern 20. Jahrhundert. Im Mittelpunkt stehen kosmischer Horror, Ermittlungen und das Gefühl, es mit Mächten zu tun zu haben, die weit größer sind als die eigenen Figuren. Es geht darum, Geheimnisse aufzudecken, sich zu gruseln und mit den Folgen der eigenen Entscheidungen umzugehen. Auch Scheitern kann ein wichtiger Teil der Geschichte sein.",
+"expectations": [
+{
+"heading": "Ein Abend zum Gruseln",
+"text": "Wir machen es uns am Tisch möglichst atmosphärisch: Der Raum wird etwas abgedunkelt, ein paar Kerzen kommen auf den Tisch und im Hintergrund läuft spannungsvolle Musik. Das Abenteuer soll sich wie ein kleiner gemeinsamer Horrorabend anfühlen. Ihr solltet euch darauf einlassen, Spaß am Ermitteln mitbringen und euch bewusst sein, dass zu diesem Genre auch Scheitern, Flucht, Überleben und Tod gehören."
+},
+{
+"heading": "Die Regeln bleiben überschaubar",
+"text": "Call of Cthulhu hat insgesamt recht viele Regeln. Für dieses Abenteuer brauchen wir davon aber nur einen kleinen Teil, der schnell erklärt und leicht verständlich ist. Vorkenntnisse sind nicht nötig."
+},
+{
+"heading": "Inhaltshinweis",
+"text": "Enthält Mord, menschliche Überreste und übernatürlichen Horror. Die Darstellungen bleiben im Rahmen typischer Horror-Genreinhalte."
+}
+],
+  "fitsIf": [
+    "du einen konzentrierten, klassischen Ermittlungsfall spielen möchtest",
+    "du beklemmenden Horror und langsam aufgedeckte Geheimnisse magst",
+    "du dich gern auf etwas mehr Regeln und verletzliche Figuren einlässt"
+  ],
   "system": "Call of Cthulhu",
-  "duration": "etwa 4–5 Stunden",
-  "players": "3–5 Personen",
-  "experience": "Keine Vorerfahrung nötig; etwas Regellust hilfreich",
-  "contentNote": "Enthält Mord, menschliche Überreste und übernatürlichen Horror.",
+  "duration": "etwa 3-4 Stunden",
+  "players": "3–4 Personen",
   "accent": "moss",
   "pageTheme": {
     "background": "#000000",
