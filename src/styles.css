@@ -43,6 +43,7 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .adventure-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; padding-bottom: 6rem; }
 .card {
   --accent: var(--gold);
+  display: block;
   grid-column: span 6;
   position: relative;
   min-height: 32rem;
@@ -109,13 +110,49 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 [data-accent="moss"] { --accent: var(--moss); }
 
 @media (max-width: 760px) {
-  .adventure-grid { display: block; }
-  .card, .card[data-layout="wide"] { min-height: 28rem; margin-bottom: 1rem; }
-  .detail-layout { grid-template-columns: 1fr; }
+  body { font-size: 16px; }
+  .shell { width: min(calc(100% - 1.25rem), var(--max)); }
+  .gallery-header { padding: 2rem 0 1.5rem; }
+  .gallery-header .kicker { margin-bottom: .65rem; }
+  h1 { max-width: none; font-size: clamp(2rem, 10.8vw, 3.1rem); letter-spacing: -.065em; }
+
+  .adventure-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+    padding-bottom: 3.5rem;
+  }
+  .card, .card[data-layout="wide"] {
+    grid-column: 1;
+    width: 100%;
+    min-height: clamp(29rem, 135vw, 34rem);
+    border-radius: 1rem;
+  }
+  .card::after { top: 1rem; right: 1.1rem; }
+  .card-content { padding: 1.25rem; }
+  .card h3 { max-width: 12ch; font-size: clamp(2.15rem, 11vw, 3.1rem); overflow-wrap: anywhere; }
+  .pitch { margin: .7rem 0 .9rem; }
+  .card-meta, .moods { font-size: .78rem; }
+
+  .detail-hero { min-height: clamp(34rem, 78svh, 42rem); }
+  .detail-hero-content { width: min(calc(100% - 1.25rem), var(--max)); padding: 7rem 0 2.5rem; }
+  .detail-hero h1 { max-width: 11ch; font-size: clamp(2.9rem, 14vw, 4.5rem); overflow-wrap: anywhere; }
+  .detail-hero .pitch { font-size: 1rem; }
+  .back { top: 1rem; left: .625rem; padding: .4rem 0; }
+
+  .detail-layout { grid-template-columns: minmax(0, 1fr); gap: 2.75rem; padding-block: 2.5rem 3.5rem; }
   .facts { position: static; order: -1; }
-  .adventure-nav { grid-template-columns: 1fr; }
+  .story section + section { margin-top: 3rem; }
+  .story h2 { font-size: clamp(1.9rem, 9vw, 2.55rem); }
+  .story p { font-size: 1rem; }
+
+  .adventure-nav { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
   .adventure-nav-placeholder { display: none; }
-  .site-footer { display: block; }
+  .adventure-nav-link { min-height: 6.5rem; padding: 1rem; }
+  .site-footer { display: block; padding: 1.5rem 0 2.5rem; }
+}
+
+@media (hover: none) {
+  .card:hover, .adventure-nav-link:hover { transform: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
