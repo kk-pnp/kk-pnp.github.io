@@ -110,7 +110,10 @@ function renderCard(adventure) {
 }
 
 function renderExpectations(expectations) {
-  return expectations.map((section) => `<section class="expectation-block">${section.heading ? `<h3>${escapeHtml(section.heading)}</h3>` : ""}${renderParagraphs(section.text)}</section>`).join("");
+  return expectations.map((section) => {
+    const warningClass = section.heading?.trim() === "Trigger Warning" ? " is-trigger-warning" : "";
+    return `<section class="expectation-block${warningClass}">${section.heading ? `<h3>${escapeHtml(section.heading)}</h3>` : ""}${renderParagraphs(section.text)}</section>`;
+  }).join("");
 }
 
 function renderAdventureNavigation(previousAdventure, nextAdventure) {
@@ -130,6 +133,7 @@ function pageHead({ title, description, cssPath, image }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#111411">
   <meta name="description" content="${escapeHtml(description)}">
   <meta property="og:type" content="website">

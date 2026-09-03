@@ -6,7 +6,7 @@
   "shortPitch": "Die älteste und stärkste Emotion der Menschheit ist die Angst, und die älteste und stärkste Art der Angst ist die Angst vor dem Unbekannten.",
   "shortPitchAuthor": "H. P. Lovecraft",
   "playerView": {
-    "who": "Es sind die 1920ern in den USA. Du bist ein gewöhnlicher Mensch, der mit dem Übernatürlichen und Übermächtigen konfrotiert wird. Die Gruppe sind Bekannte von Arthur Blackwood, der beteuert, er würde zu unrecht verdächtigt, seine Frau ermordet zu haben. Je nach Gruppe und verfügbarer Zeit wählst du eine vorbereitete Figur oder erstellst deinen Charakter gemeinsam mit den anderen.",
+    "who": "Es sind die 1920er-Jahre in den USA. Du bist ein gewöhnlicher Mensch, der mit dem Übernatürlichen und Übermächtigen konfrotiert wird. Die Gruppe besteht aus Bekannten von Arthur Blackwood, der beteuert, zu Unrecht verdächtigt zu werden, seine Frau ermordet zu haben. Je nach Gruppe und verfügbarer Zeit wählst du eine vorbereitete Figur oder erstellst deinen Charakter gemeinsam mit den anderen.",
     "do": "Du sollst Beweise dafür finden, dass Arthur Blackwood seine Frau nicht ermordet hat. Dafür untersuchst du die abgelegene Familienhütte und vor allem ihren alten Keller.",
     "can": "Du befragst Menschen, untersuchst Räume und setzt Hinweise zu einem Bild zusammen. Deine Figur besitzt alltägliche und berufliche Fähigkeiten. übernatürlichen Gefahren begegnet sie als verletzlicher Mensch."
   },
@@ -21,14 +21,14 @@
 "text": "Call of Cthulhu hat insgesamt recht viele Regeln. Für dieses Abenteuer brauchen wir davon aber nur einen kleinen Teil, der schnell erklärt und leicht verständlich ist. Vorkenntnisse sind nicht nötig."
 },
 {
-"heading": "Inhaltshinweis",
+"heading": "Trigger Warning",
 "text": "Enthält Mord, menschliche Überreste und übernatürlichen Horror. Die Darstellungen bleiben im Rahmen typischer Horror-Genreinhalte."
 }
 ],
   "fitsIf": [
     "du einen konzentrierten, klassischen Ermittlungsfall spielen möchtest",
     "du beklemmenden Horror und langsam aufgedeckte Geheimnisse magst",
-    "du dich gern auf etwas mehr Regeln und verletzliche Figuren einlässt"
+    "du dich gern auf verletzliche Figuren einlässt"
   ],
   "system": "Call of Cthulhu",
   "duration": "etwa 3-4 Stunden",

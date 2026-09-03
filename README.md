@@ -2,6 +2,8 @@
 
 Eine statische Website für Pen-and-Paper-One-Shots. Jeder One-Shot liegt in einer eigenen JSON-Datei; daraus werden die Übersicht und die Detailseiten automatisch erzeugt.
 
+Alle erzeugten Seiten enthalten `noindex, nofollow`, damit Suchmaschinen die private Übersicht nicht in ihre Suchergebnisse aufnehmen und ihren Links nicht folgen sollen.
+
 ## Inhalte bearbeiten
 
 - Seitentitel und kurze Beschreibung: `content/site.json`
@@ -57,7 +59,7 @@ Die ausführlichen Inhalte einer Seite werden mit diesen Feldern gepflegt:
 ]
 ```
 
-Unter `expectations` können beliebig viele Blöcke ergänzt werden. `heading` ist optional; `text` ist immer erforderlich. Innerhalb längerer Texte erzeugt eine Leerzeile einen neuen Absatz.
+Unter `expectations` können beliebig viele Blöcke ergänzt werden. `heading` ist optional; `text` ist immer erforderlich. Innerhalb längerer Texte erzeugt eine Leerzeile einen neuen Absatz. Die Zwischenüberschriften erscheinen in der Akzentfarbe der jeweiligen Seite. Eine Überschrift, die exakt `Trigger Warning` lautet, wird automatisch rot dargestellt.
 
 Die Box „Auf einen Blick“ zeigt automatisch `system`, `duration` und `players`. Darunter erscheinen die zwei bis vier Einträge aus `fitsIf`. Inhaltshinweise gehören als eigener Block unter `expectations`.
 

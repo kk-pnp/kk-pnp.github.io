@@ -7,6 +7,7 @@
   --cyan: #65c4c9;
   --coral: #e27c64;
   --moss: #7f9b72;
+  --warning: #ff7373;
   --max: 1180px;
 }
 
@@ -79,8 +80,8 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 
 .detail-hero { --accent: var(--gold); position: relative; min-height: 72vh; display: flex; align-items: end; overflow: hidden; border-bottom: 1px solid var(--line); background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 26%, #18201b), #0e100e 68%); }
 .detail-page { --surface: rgba(255,255,255,.035); background: var(--page-bg); }
-.detail-page.theme-light { --ink: #211e19; --muted: #6b6257; --line: rgba(33,30,25,.17); --surface: rgba(33,30,25,.055); }
-.detail-page.theme-dark { --ink: #f4efe3; --muted: #b9b2a4; --line: rgba(244,239,227,.14); --surface: rgba(255,255,255,.035); }
+.detail-page.theme-light { --ink: #211e19; --muted: #6b6257; --line: rgba(33,30,25,.17); --surface: rgba(33,30,25,.055); --warning: #a52132; }
+.detail-page.theme-dark { --ink: #f4efe3; --muted: #b9b2a4; --line: rgba(244,239,227,.14); --surface: rgba(255,255,255,.035); --warning: #ff7373; }
 .detail-hero { color: #f4efe3; --muted: #c9c1b5; --line: rgba(244,239,227,.14); }
 .detail-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, #111411 2%, rgba(17,20,17,.58) 45%, rgba(17,20,17,.15)); }
 .detail-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -92,9 +93,9 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .detail-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(17rem, .7fr); column-gap: clamp(2rem, 8vw, 7rem); row-gap: 2rem; padding-block: clamp(3.5rem, 8vw, 7rem); }
 .you-panel { grid-column: 1; grid-row: 1; padding: clamp(1.4rem, 4vw, 2.25rem); border: 1px solid var(--line); border-radius: 1.25rem; background: var(--surface); }
 .you-panel > h2 { margin: 0 0 1.8rem; font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 500; }
-.you-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
-.you-grid section { min-width: 0; padding-right: 1.25rem; }
-.you-grid section + section { padding-left: 1.25rem; border-left: 1px solid var(--line); }
+.you-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.you-grid section { min-width: 0; }
+.you-grid section + section { margin-top: 1.35rem; padding-top: 1.35rem; border-top: 1px solid var(--line); }
 .you-grid h3 { margin: 0 0 .75rem; color: var(--accent); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; font-weight: 800; letter-spacing: .08em; line-height: 1.3; text-transform: uppercase; }
 .you-grid p { margin: 0; color: var(--ink); opacity: .86; font-size: .96rem; }
 .story { grid-column: 1; grid-row: 2; }
@@ -103,7 +104,8 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
 .story p { color: var(--ink); opacity: .86; font-size: 1.08rem; }
 .system-name { margin: 0 0 1rem; color: var(--accent) !important; opacity: 1 !important; font-family: ui-serif, Georgia, Cambria, serif; font-size: clamp(1.35rem, 2.7vw, 1.8rem) !important; line-height: 1.2; }
 .expectation-block + .expectation-block { margin-top: 2.25rem; }
-.expectation-block h3 { margin: 0 0 .65rem; font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
+.expectation-block h3 { margin: 0 0 .65rem; color: var(--accent); font-size: 1.35rem; font-weight: 500; line-height: 1.2; }
+.expectation-block.is-trigger-warning h3 { color: var(--warning); }
 .expectation-block p { margin-block: .5rem; }
 .facts { grid-column: 2; grid-row: 1 / span 2; position: sticky; top: 1rem; align-self: start; padding: 1.4rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
 .facts h2 { margin: 0 0 1rem; font-size: 1.5rem; }
@@ -162,9 +164,7 @@ h1 { margin: 0; max-width: 12ch; font-size: clamp(3.3rem, 10vw, 7.6rem); font-we
   .you-panel, .facts, .story { grid-column: 1; grid-row: auto; }
   .you-panel { padding: 1.25rem; }
   .you-panel > h2 { margin-bottom: 1.35rem; font-size: clamp(2rem, 10vw, 2.8rem); }
-  .you-grid { grid-template-columns: 1fr; }
-  .you-grid section { padding: 0; }
-  .you-grid section + section { margin-top: 1.25rem; padding: 1.25rem 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .you-grid section + section { margin-top: 1.25rem; padding-top: 1.25rem; }
   .facts { position: static; }
   .story-section { padding-block: 2.75rem; }
   .story h2 { font-size: clamp(1.9rem, 9vw, 2.55rem); }
