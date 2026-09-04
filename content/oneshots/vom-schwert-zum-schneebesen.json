@@ -5,22 +5,29 @@
   "layout": "standard",
   "shortPitch": "Ein leichtes Fantasy-Abenteuer für alle, die Heldenmut auch abseits des Schlachtfelds beweisen wollen.",
   "playerView": {
-    "who": "Du spielst eine selbst erstellte Fantasyfigur, die ihr gemeinsam vor dem Start entwickelt. Das geht schnell und lässt trotzdem genug Raum für eigene Ideen.",
-    "do": "Welche Aufgabe dich vom Schwert zum Schneebesen führt, wird noch ergänzt. Fest steht: Heldenmut ist diesmal auch abseits des Schlachtfelds gefragt.",
-    "can": "Du setzt die wenigen, klaren Fähigkeiten deiner Figur ein und kannst dich ganz auf kreative Lösungen und die gemeinsame Geschichte konzentrieren."
+    "who": "Ihr wart einmal klassische Fantasyheldinnen und -helden. Inzwischen habt ihr eure Abenteurerkarrieren an den Nagel gehängt und betreibt gemeinsam eine kleine Backstube. Eure Figuren erstellt ihr zusammen vor dem Spiel.",
+    "do": "Ihr genießt euer beschauliches Leben in der Backstube. Natürlich wird diese Idylle auf gar keinen Fall gestört und selbstverständlich passiert nichts, das euch wieder in ein Abenteuer verwickelt. Falls wider Erwarten doch, könnte daraus ein kleines märchenhaftes Fantasyabenteuer entstehen.",
+    "can": "Ihr spielt klassische Fantasyfiguren mit vertrauten Spezies, Rollen und Fähigkeiten. Ihr könnt zaubern, kämpfen, schleichen, überzeugen und allerlei anderen Abenteurerkram. Die Regeln bleiben dabei bewusst überschaubar und lassen sich schnell lernen."
   },
-  "playedWith": "Tiny D6 ist ein bewusst schlankes Rollenspielsystem. Figuren sind schnell erstellt, die Regeln leicht erklärt und im Mittelpunkt stehen eure Ideen und die gemeinsame Geschichte statt langer Regelpausen. Vorkenntnisse braucht ihr nicht.",
+  "playedWith": "Vom Schwert zum Schneebesen wird mit Tiny Dungeon gespielt, einem sehr schlanken Fantasy-Rollenspiel mit wenigen Regeln und normalen sechsseitigen Würfeln. Die Charaktere lassen sich schnell gemeinsam erstellen und brauchen keine langen Listen aus Zaubern, Talenten oder Sonderregeln.\n\nDas Spiel eignet sich dadurch gut für einen unkomplizierten Fantasyabend, bei dem die Figuren und das gemeinsame Abenteuer mehr Raum bekommen als taktische Detailregeln.",
   "expectations": [
-    { "heading": "Noch in Arbeit", "text": "Weitere Informationen zur Ausgangslage und zu den konkreten Herausforderungen des Abenteuers folgen noch." },
-    { "heading": "Leichte Fantasy", "text": "Geplant ist ein zugänglicher Abend, bei dem eigene Ideen, Humor und gemeinsames Problemlösen wichtiger sind als lange Regelpassagen." }
+  {
+  "heading": "Cozy Fantasy",
+  "text": "Der Abend soll sich gemütlich, leicht und ein bisschen märchenhaft anfühlen. Wenn ihr mögt, bringt Gebäck mit, wir machen es uns am Tisch gemütlich und behandeln auch kleine Probleme so, als könnten sie ein echtes Abenteuer wert sein."
+  },
+  {
+  "heading": "Leicht und leichtherzig",
+  "text": "Gefahren und klassische Fantasyprobleme gehören weiterhin dazu, der Ton bleibt aber grundsätzlich freundlich und humorvoll. Hier müsst ihr nicht mit einem düsteren Weltuntergang oder einem besonders harten taktischen Kampf rechnen."
+  }
   ],
   "fitsIf": [
-    "du unkomplizierte Fantasy und ein leichtes Regelsystem suchst",
-    "du gerne eigene Figuren erstellst, ohne lange Werte zu verteilen",
-    "du Heldenmut auch einmal abseits klassischer Schlachten erleben möchtest"
+  "du für ein paar Stunden in eine fantastische, märchenhafte Welt eintauchen möchtest, ohne dass es düster oder brutal wird",
+  "du gern aus verschiedenen Spezies, Talenten und Fähigkeiten auswählst, ohne dich durch eine komplizierte Charaktererschaffung kämpfen zu müssen",
+  "du Spaß daran hast, einen erfahrenen Helden mit großer Vergangenheit, kleinen Macken und einem ganz persönlichen Gebrechen zu spielen"
   ],
+
   "system": "Tiny D6",
-  "duration": "etwa 3–4 Stunden",
+  "duration": "etwa 3 Stunden",
   "players": "3–5 Personen",
   "accent": "gold",
   "pageTheme": {

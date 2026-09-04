@@ -1,29 +1,30 @@
 {
   "slug": "goldene-hoellen",
   "title": "Goldene Höllen",
+  "pageType": "playtest",
   "order": 8,
   "layout": "standard",
-  "tag": "Coming Soon",
-  "shortPitch": "Pulpige Fantasy zwischen goldenen Metropolen und einer leibhaftigen Hölle, die beim Graben unter der Erde geweckt wurde.",
-  "playerView": {
-    "who": "Du spielst eine Figur in einer Welt zwischen Dieselpulp, Fantasy und den Folgen einer geöffneten Hölle. Unterschiedliche Charakteroptionen sollen sehr verschiedene Kräfte, Fähigkeiten und Formen von Magie ermöglichen.",
-    "do": "Du steigst in gefährliche Tiefen hinab, suchst nach seltenen Schätzen oder untersuchst Geheimnisse in gewaltigen Metropolen. Die konkreten Abenteuer befinden sich noch in Entwicklung.",
-    "can": "Du sollst besondere Fähigkeiten und mächtige Magie einsetzen und deine Figur deutlich weiterentwickeln können. Die genauen Optionen entstehen derzeit gemeinsam mit dem System."
+  "tag": "Playtester gesucht",
+  "shortPitch": "Ein größeres Fantasy-Dieselpulp-System über goldene Metropolen, gefährliche Tiefen und eine Hölle, die besser verschlossen geblieben wäre.",
+  "projectSections": [
+    {
+      "heading": "Ein größeres Projekt",
+      "text": "Mit Goldene Höllen entwickle ich gerade ein eigenes, etwas größeres Rollenspielsystem auf Grundlage der Year Zero Engine. Es soll mehr Charakteroptionen und spielerische Tiefe bieten als meine kleinen One-Shot-Systeme, aber trotzdem zugänglich bleiben und zügig ins Spiel führen."
+    },
+    {
+      "heading": "Worum geht es?",
+      "text": "Goldene Höllen verbindet Fantasy mit Dieselpulp und dem Lebensgefühl der ersten Hälfte des 20. Jahrhunderts. Weil weite Teile der Oberfläche lebensfeindlich sind, gruben die Menschen nach seltenen Metallen und anderen Schätzen, um Wohlstand zu schaffen und gewaltige Metropolen zu errichten. Doch sie gruben zu tief und legten eine wirkliche, physische Hölle frei. Seitdem dringen Gefahren von dort nach oben – aber es warten auch Gelegenheiten auf alle, die bereit sind, hinabzusteigen."
+    },
+    {
+      "heading": "Was soll damit möglich sein?",
+      "text": "Das System soll unterschiedliche Arten von Abenteuern tragen: Expeditionen in gefährliche Dungeons ebenso wie urbane Mystery-Geschichten zwischen Industrie, Magie und den Geheimnissen großer Städte. Verschiedene Charakteroptionen sollen Figuren mit besonderen Kräften, starken Fähigkeiten und mächtiger Magie ermöglichen."
+    }
+  ],
+  "playtestCall": {
+    "heading": "Playtester gesucht",
+    "text": "Goldene Höllen befindet sich noch in Entwicklung. Deshalb suche ich immer wieder Leute, die Lust haben, einzelne Regeln, Charakteroptionen oder Abenteuer mit mir auszuprobieren. Du musst dich dafür nicht dauerhaft festlegen und brauchst keine Vorkenntnisse. Wenn du grundsätzlich Lust hast, hin und wieder bei einem Playtest dabei zu sein, melde dich gerne bei mir."
   },
-  "playedWith": "Goldene Höllen ist ein größeres Rollenspielsystem, das ich derzeit auf Grundlage der Year Zero Engine entwickle. Es verbindet Fantasy mit Dieselpulp und einer Welt, deren Menschen beim Graben nach seltenen Schätzen eine wirkliche, physische Hölle freigelegt haben.\n\nDas System wird umfangreicher und etwas crunchiger als meine kurzen One-Shot-Systeme und soll spielerische Tiefe für Fähigkeiten, Magie, Erkundung und sehr unterschiedliche Abenteuerformen bieten.",
-  "expectations": [
-    { "heading": "Dungeons unter einer feindlichen Welt", "text": "Expeditionen führen in gefährliche Tiefen, in denen höllische Bedrohungen und wertvolle Funde oft dicht beieinanderliegen." },
-    { "heading": "Mystery in goldenen Metropolen", "text": "Daneben soll das System urbane Geschichten zwischen Industrie, Magie, Macht und den Geheimnissen riesiger Städte ermöglichen." },
-    { "heading": "Noch in Entwicklung", "text": "Das System und die ersten konkreten Abenteuer entstehen derzeit. Diese Seite gibt deshalb zunächst einen Ausblick auf die geplante Spielwelt und ihre Möglichkeiten." }
-  ],
-  "fitsIf": [
-    "du pulpige Fantasy mit Industrie, Magie und höllischen Gefahren spannend findest",
-    "du Lust auf besondere Charakterfähigkeiten und etwas mehr spielerischen Crunch hast",
-    "du ein neues System während seiner Entwicklung kennenlernen möchtest"
-  ],
-  "system": "Goldene Höllen – in Entwicklung",
-  "duration": "Noch offen",
-  "players": "Noch offen",
+  "system": "Eigenes System auf Basis der Year Zero Engine",
   "accent": "gold",
   "pageTheme": {
     "background": "#211b13",

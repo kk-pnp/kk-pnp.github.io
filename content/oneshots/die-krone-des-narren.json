@@ -3,21 +3,27 @@
   "title": "Die Krone des Narren",
   "order": 3,
   "layout": "wide",
-  "shortPitch": "Die Krone eures Königs wurde gestohlen – und ihre Spur führt in ein verdrehtes Schloss voller Narren und gefährlicher Spiele.",
+  "shortPitch": "Nani?! Ein JRPG-Abenteuer voller ikonischer Monster, fantastischer Orte und großer Heldenmomente!",
   "playerView": {
     "who": "Du bist eine Heldin oder ein Held im Dienst eines Königs. Du wählst eine vorbereitete Figur und passt sie anschließend mit einigen eigenen Entscheidungen an.",
-    "do": "Du folgst der Spur einer gestohlenen Krone in ein verzerrtes Parallelweltschloss. Dort stellst du dich den Spielen, Rätseln und Wächtern eines närrischen Hofstaats.",
-    "can": "Deine Figur besitzt besondere Fähigkeiten für Erkundung und Kampf. Im Team verbindet ihr eure Stärken, setzt spektakuläre Aktionen ein und findet kreative Wege durch die Hindernisse des Schlosses."
+    "do": "Ihr erkundet den Dungeon im Schloss eines närrischen Dämons. Dabei erwarten euch Rätsel, ungewöhnliche Gegner, fantastische Schauplätze und ein großer Bosskampf im Stil klassischer JRPGs.",
+    "can": "Jede Figur hat eigene besondere Fähigkeiten: mächtige Angriffe, Magie, Unterstützung für Verbündete oder andere Tricks. Ihr könnt diese Fähigkeiten miteinander verbinden und zugleich mit euren eigenen Ideen auf die ungewöhnlichen Herausforderungen des Schlosses reagieren."
   },
-  "playedWith": "Fabula Ultima ist ein Fantasy-Rollenspiel, das von japanischen Videorollenspielen inspiriert ist. Gemeinsam erzählt ihr große Geschichten über aufstrebende Heldinnen und Helden, mächtige Gegenspieler, fantastische Welten und ungewöhnliche Monster.\n\nDas System bietet verschiedene Fähigkeiten, Spielwerte und taktische Möglichkeiten und ist deshalb etwas regelintensiver. Ihr solltet Lust auf einige Regeln haben; auch als Einsteigerinnen und Einsteiger könnt ihr problemlos mitspielen. Alles für eure Figuren Wichtige gehen wir gemeinsam durch.",
+  "playedWith": "Fabula Ultima ist ein modernes Fantasy-Rollenspiel, das sich an japanischen Videorollenspielen wie Final Fantasy orientiert. Es dreht sich um außergewöhnliche Heldinnen und Helden, fantastische Schauplätze, große Gegenspieler und Kämpfe, in denen die Fähigkeiten der Gruppe ineinandergreifen.\n\nDie Figuren haben mehr Spielwerte und besondere Fähigkeiten als in vielen anderen One-Shots auf dieser Seite. Dennoch sind alle Regeln auch ohne Vorerfahrung schnell zu erlernen, gerade wenn du sowas aus Brett- oder Videospielen kennst.",
   "expectations": [
-    { "heading": "Ein Schloss wie aus einem JRPG", "text": "Die Suche führt durch fantastische, stilisierte Orte voller Narren, Clowns und höfischer Maskenspiele. Jede neue Tür kann einen weiteren überzeichneten Einfall verbergen." },
-    { "heading": "Kämpfe und Rätsel", "text": "Euch erwarten mehrere dramatische Auseinandersetzungen und trickreiche Aufgaben, bei denen nicht nur gute Werte, sondern auch Zusammenarbeit und Ideen gefragt sind." }
+  {
+  "heading": "Hier gehören Kämpfe zum Abenteuer",
+  "text": "Mehrere Herausforderungen werden als richtige Kämpfe ausgespielt. Dabei lohnt es sich, die Fähigkeiten der eigenen Figur zu kennen, auf die anderen zu achten und gemeinsam gute Kombinationen zu finden."
+  },
+  {
+  "heading": "Groß, bunt und ein bisschen drüber",
+  "text": "Das Abenteuer nimmt seine JRPG-Inspiration ernst: bizarre Gegner, dramatische Auftritte, fantastische Orte und spektakuläre Aktionen gehören ausdrücklich dazu. Ihr dürft eure Figuren entsprechend selbstbewusst und größer als das Leben spielen."
+  }
   ],
   "fitsIf": [
-    "du klassische JRPG-Fantasy und überzeichnete Schauplätze magst",
-    "du Lust auf besondere Fähigkeiten und taktische Kämpfe hast",
-    "du trotz etwas mehr Regeln auch Rätsel und gemeinsames Erzählen suchst"
+    "du Lust auf taktische Kämpfe, große Gegner und einen heroischen Fantasy-Abend hast",
+    "du bei Videospiel-RPGs gern an Charakterwerten schraubst, Fähigkeiten auswählst und Builds ausprobierst",
+    "du in lockerer, ungezwungener Atmosphäre ausprobieren möchtest, deinen Helden wirklich auszuspielen"
   ],
   "system": "Fabula Ultima",
   "duration": "4–5 Stunden",

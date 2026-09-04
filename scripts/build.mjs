@@ -21,38 +21,65 @@ const renderParagraphs = (value = "") => String(value)
   .map((paragraph) => `<p>${escapeHtml(paragraph.replace(/\s*\r?\n\s*/g, " "))}</p>`)
   .join("");
 
-const requiredStrings = ["slug", "title", "shortPitch", "playedWith", "duration", "players"];
+const requiredStrings = ["slug", "title", "shortPitch"];
 const allowedAccents = new Set(["gold", "cyan", "coral", "moss"]);
+const allowedPageTypes = new Set(["adventure", "playtest"]);
 
 function validateAdventure(adventure, filename) {
   const errors = [];
+  const pageType = adventure.pageType || "adventure";
   requiredStrings.forEach((field) => {
     if (typeof adventure[field] !== "string" || !adventure[field].trim()) errors.push(`"${field}" fehlt oder ist leer`);
   });
+  if (!allowedPageTypes.has(pageType)) errors.push('"pageType" muss "adventure" oder "playtest" sein');
   if (adventure.shortPitchAuthor !== undefined && (typeof adventure.shortPitchAuthor !== "string" || !adventure.shortPitchAuthor.trim())) {
     errors.push('"shortPitchAuthor" muss eine nicht-leere Zeichenkette sein');
   }
-  if (!adventure.playerView || typeof adventure.playerView !== "object" || Array.isArray(adventure.playerView)) {
-    errors.push('"playerView" muss ein Objekt sein');
+  if (pageType === "playtest") {
+    if (!Array.isArray(adventure.projectSections) || adventure.projectSections.length === 0) {
+      errors.push('"projectSections" muss eine nicht-leere Liste sein');
+    } else {
+      adventure.projectSections.forEach((section, index) => {
+        if (!section || typeof section !== "object" || Array.isArray(section)) {
+          errors.push(`"projectSections[${index}]" muss ein Objekt sein`);
+          return;
+        }
+        if (typeof section.heading !== "string" || !section.heading.trim()) errors.push(`"projectSections[${index}].heading" fehlt oder ist leer`);
+        if (typeof section.text !== "string" || !section.text.trim()) errors.push(`"projectSections[${index}].text" fehlt oder ist leer`);
+      });
+    }
+    if (!adventure.playtestCall || typeof adventure.playtestCall !== "object" || Array.isArray(adventure.playtestCall)) {
+      errors.push('"playtestCall" muss ein Objekt sein');
+    } else {
+      if (typeof adventure.playtestCall.heading !== "string" || !adventure.playtestCall.heading.trim()) errors.push('"playtestCall.heading" fehlt oder ist leer');
+      if (typeof adventure.playtestCall.text !== "string" || !adventure.playtestCall.text.trim()) errors.push('"playtestCall.text" fehlt oder ist leer');
+    }
   } else {
-    [["who", "Wer bin ich?"], ["do", "Was mache ich?"], ["can", "Was kann ich?"]].forEach(([field, label]) => {
-      if (typeof adventure.playerView[field] !== "string" || !adventure.playerView[field].trim()) errors.push(`"playerView.${field}" (${label}) fehlt oder ist leer`);
+    ["playedWith", "duration", "players"].forEach((field) => {
+      if (typeof adventure[field] !== "string" || !adventure[field].trim()) errors.push(`"${field}" fehlt oder ist leer`);
     });
-  }
-  if (!Array.isArray(adventure.expectations) || adventure.expectations.length === 0) {
-    errors.push('"expectations" muss eine nicht-leere Liste sein');
-  } else {
-    adventure.expectations.forEach((section, index) => {
-      if (!section || typeof section !== "object" || Array.isArray(section)) {
-        errors.push(`"expectations[${index}]" muss ein Objekt sein`);
-        return;
-      }
-      if (typeof section.text !== "string" || !section.text.trim()) errors.push(`"expectations[${index}].text" fehlt oder ist leer`);
-      if (section.heading !== undefined && (typeof section.heading !== "string" || !section.heading.trim())) errors.push(`"expectations[${index}].heading" muss eine nicht-leere Zeichenkette sein`);
-    });
-  }
-  if (!Array.isArray(adventure.fitsIf) || adventure.fitsIf.length < 2 || adventure.fitsIf.length > 4 || adventure.fitsIf.some((item) => typeof item !== "string" || !item.trim())) {
-    errors.push('"fitsIf" muss eine Liste aus zwei bis vier Texten sein');
+    if (!adventure.playerView || typeof adventure.playerView !== "object" || Array.isArray(adventure.playerView)) {
+      errors.push('"playerView" muss ein Objekt sein');
+    } else {
+      [["who", "Wer bin ich?"], ["do", "Was mache ich?"], ["can", "Was kann ich?"]].forEach(([field, label]) => {
+        if (typeof adventure.playerView[field] !== "string" || !adventure.playerView[field].trim()) errors.push(`"playerView.${field}" (${label}) fehlt oder ist leer`);
+      });
+    }
+    if (!Array.isArray(adventure.expectations) || adventure.expectations.length === 0) {
+      errors.push('"expectations" muss eine nicht-leere Liste sein');
+    } else {
+      adventure.expectations.forEach((section, index) => {
+        if (!section || typeof section !== "object" || Array.isArray(section)) {
+          errors.push(`"expectations[${index}]" muss ein Objekt sein`);
+          return;
+        }
+        if (typeof section.text !== "string" || !section.text.trim()) errors.push(`"expectations[${index}].text" fehlt oder ist leer`);
+        if (section.heading !== undefined && (typeof section.heading !== "string" || !section.heading.trim())) errors.push(`"expectations[${index}].heading" muss eine nicht-leere Zeichenkette sein`);
+      });
+    }
+    if (!Array.isArray(adventure.fitsIf) || adventure.fitsIf.length < 2 || adventure.fitsIf.length > 4 || adventure.fitsIf.some((item) => typeof item !== "string" || !item.trim())) {
+      errors.push('"fitsIf" muss eine Liste aus zwei bis vier Texten sein');
+    }
   }
   if (adventure.slug && !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(adventure.slug)) errors.push('"slug" darf nur Kleinbuchstaben, Zahlen und Bindestriche enthalten');
   if (adventure.accent && !allowedAccents.has(adventure.accent)) errors.push(`"accent" muss ${[...allowedAccents].join(", ")} sein`);
@@ -97,6 +124,9 @@ function shortPitchMarkup(adventure) {
 }
 
 function renderCard(adventure) {
+  const meta = adventure.pageType === "playtest"
+    ? [adventure.system]
+    : [adventure.system, adventure.duration, adventure.players];
   return `
     <a class="card" data-accent="${escapeHtml(adventure.accent || "gold")}" data-layout="${escapeHtml(adventure.layout || "standard")}" href="./abenteuer/${encodeURIComponent(adventure.slug)}.html">
       ${imageMarkup(adventure, "card-image")}
@@ -104,7 +134,7 @@ function renderCard(adventure) {
         ${badgeMarkup(adventure)}
         <h3>${escapeHtml(adventure.title)}</h3>
         ${shortPitchMarkup(adventure)}
-        <div class="card-meta">${adventure.system ? `<span>${escapeHtml(adventure.system)}</span>` : ""}<span>${escapeHtml(adventure.duration)}</span><span>${escapeHtml(adventure.players)}</span></div>
+        <div class="card-meta">${meta.filter(Boolean).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>
       </div>
     </a>`;
 }
@@ -118,12 +148,40 @@ function renderExpectations(expectations) {
 
 function renderAdventureNavigation(previousAdventure, nextAdventure) {
   const previous = previousAdventure
-    ? `<a class="adventure-nav-link adventure-nav-previous" rel="prev" href="./${encodeURIComponent(previousAdventure.slug)}.html"><span>← Vorheriges Abenteuer</span><strong>${escapeHtml(previousAdventure.title)}</strong></a>`
+    ? `<a class="adventure-nav-link adventure-nav-previous" rel="prev" href="./${encodeURIComponent(previousAdventure.slug)}.html"><span>← Vorherige Seite</span><strong>${escapeHtml(previousAdventure.title)}</strong></a>`
     : '<span class="adventure-nav-placeholder" aria-hidden="true"></span>';
   const next = nextAdventure
-    ? `<a class="adventure-nav-link adventure-nav-next" rel="next" href="./${encodeURIComponent(nextAdventure.slug)}.html"><span>Nächstes Abenteuer →</span><strong>${escapeHtml(nextAdventure.title)}</strong></a>`
+    ? `<a class="adventure-nav-link adventure-nav-next" rel="next" href="./${encodeURIComponent(nextAdventure.slug)}.html"><span>Nächste Seite →</span><strong>${escapeHtml(nextAdventure.title)}</strong></a>`
     : '<span class="adventure-nav-placeholder" aria-hidden="true"></span>';
-  return `<nav class="adventure-nav shell" aria-label="Zwischen den Abenteuern wechseln">${previous}${next}</nav>`;
+  return `<nav class="adventure-nav shell" aria-label="Zwischen den Seiten wechseln">${previous}${next}</nav>`;
+}
+
+function renderProjectDetail(adventure) {
+  const sections = adventure.projectSections.map((section) => `<section class="project-section"><h2>${escapeHtml(section.heading)}</h2><div>${renderParagraphs(section.text)}</div></section>`).join("");
+  return `<div class="project-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}"><article class="project-story">${sections}<section class="playtest-callout"><p class="kicker">Mach mit</p><h2>${escapeHtml(adventure.playtestCall.heading)}</h2>${renderParagraphs(adventure.playtestCall.text)}</section></article></div>`;
+}
+
+function renderAdventureDetail(adventure) {
+  const facts = [
+    ...(adventure.system ? [["System", adventure.system]] : []),
+    ["Dauer", adventure.duration], ["Gruppe", adventure.players]
+  ];
+  return `<div class="detail-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}">
+      <section class="you-panel">
+        <p class="kicker">Deine Rolle im Abenteuer</p>
+        <h2>Du in „${escapeHtml(adventure.title)}“</h2>
+        <div class="you-grid">
+          <section><h3>Wer bin ich?</h3>${renderParagraphs(adventure.playerView.who)}</section>
+          <section><h3>Was mache ich?</h3>${renderParagraphs(adventure.playerView.do)}</section>
+          <section><h3>Was kann ich?</h3>${renderParagraphs(adventure.playerView.can)}</section>
+        </div>
+      </section>
+      <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl><section class="facts-fit"><h3>Passt gut zu dir, wenn …</h3><ul>${adventure.fitsIf.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section></aside>
+      <article class="story">
+        <section class="story-section played-with"><p class="kicker">Das Regelsystem</p><h2>Gespielt mit</h2><p class="system-name">${escapeHtml(adventure.system || "Wird noch ergänzt")}</p>${renderParagraphs(adventure.playedWith)}</section>
+        <section class="story-section"><p class="kicker">Am Spieltisch</p><h2>Was erwartet euch?</h2><div class="expectations">${renderExpectations(adventure.expectations)}</div></section>
+      </article>
+    </div>`;
 }
 
 function pageHead({ title, description, cssPath, image }) {
@@ -163,10 +221,7 @@ function renderIndex(site, adventures) {
 
 function renderDetail(site, adventure, previousAdventure, nextAdventure) {
   const pageTheme = adventure.pageTheme || { background: "#111411", mode: "dark" };
-  const facts = [
-    ...(adventure.system ? [["System", adventure.system]] : []),
-    ["Dauer", adventure.duration], ["Gruppe", adventure.players]
-  ];
+  const detailContent = adventure.pageType === "playtest" ? renderProjectDetail(adventure) : renderAdventureDetail(adventure);
   return `${pageHead({ title: `${adventure.title} – ${site.title}`, description: adventure.shortPitch, cssPath: "../assets/styles.css", image: adventure.image?.src ? `../${adventure.image.src.replace(/^\.\//, "")}` : undefined })}
 <body class="detail-page theme-${pageTheme.mode}" style="--page-bg:${pageTheme.background}">
   <main>
@@ -178,22 +233,7 @@ function renderDetail(site, adventure, previousAdventure, nextAdventure) {
         <h1>${escapeHtml(adventure.title)}</h1>${shortPitchMarkup(adventure)}
       </div>
     </section>
-    <div class="detail-layout shell" data-accent="${escapeHtml(adventure.accent || "gold")}">
-      <section class="you-panel">
-        <p class="kicker">Deine Rolle im Abenteuer</p>
-        <h2>Du in „${escapeHtml(adventure.title)}“</h2>
-        <div class="you-grid">
-          <section><h3>Wer bin ich?</h3>${renderParagraphs(adventure.playerView.who)}</section>
-          <section><h3>Was mache ich?</h3>${renderParagraphs(adventure.playerView.do)}</section>
-          <section><h3>Was kann ich?</h3>${renderParagraphs(adventure.playerView.can)}</section>
-        </div>
-      </section>
-      <aside class="facts"><h2>Auf einen Blick</h2><dl>${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("")}</dl><section class="facts-fit"><h3>Passt gut zu dir, wenn …</h3><ul>${adventure.fitsIf.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section></aside>
-      <article class="story">
-        <section class="story-section played-with"><p class="kicker">Das Regelsystem</p><h2>Gespielt mit</h2><p class="system-name">${escapeHtml(adventure.system || "Wird noch ergänzt")}</p>${renderParagraphs(adventure.playedWith)}</section>
-        <section class="story-section"><p class="kicker">Am Spieltisch</p><h2>Was erwartet euch?</h2><div class="expectations">${renderExpectations(adventure.expectations)}</div></section>
-      </article>
-    </div>
+    ${detailContent}
     ${renderAdventureNavigation(previousAdventure, nextAdventure)}
   </main>
   <footer class="site-footer shell"><a class="contact-link" href="../index.html">← Zurück zur Übersicht</a></footer>

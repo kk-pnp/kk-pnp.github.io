@@ -3,24 +3,31 @@
   "title": "Lady Bloodbath",
   "order": 6,
   "layout": "wide",
-  "shortPitch": "Entführt die Mutter des Gouverneurs von Cartagena – mit Seemannsgarn, Dreistigkeit und einem Plan, der kaum lange halten wird.",
+  "shortPitch": "Nein, ich schwöre dir. Unsere ehemalige Kapitänin, die blutüberströmt auf den Leichen ihrer Feinde getanzt hat, ist die Mutter des Gouverneurs von Cartagena.",
+  "shortPitchAuthor": "Ein nüchterner Pirat, der niemals Seemansgarn spinnt",
   "playerView": {
     "who": "Du bist Teil einer Piratencrew, die ihr zu Beginn gemeinsam erstellt. Deine Figur ist schnell gebaut und bekommt genau die Talente, Schwächen und übertriebenen Geschichten, die zu eurer Mannschaft passen.",
-    "do": "Du versuchst mit deiner Crew, die Mutter des Gouverneurs von Cartagena zu entführen. Dafür braucht ihr Dreistigkeit, einen halbwegs brauchbaren Plan und die Bereitschaft, ihn sofort wieder über Bord zu werfen.",
-    "can": "Du kannst Seemannsgarn über vergangene Abenteuer erzählen und damit die gemeinsame Spielwelt beeinflussen. Ob deine Behauptung stimmt, zeigt sich häufig erst dann, wenn sie dringend wahr sein müsste."
+    "do": "Ein Brief eurer ehemaligen Kapitänin Lady Bloodbath führt euch zu einem schwer bewachten Anwesen. Sie behauptet, dort gegen ihren Willen festgehalten zu werden. Wie ihr hineinkommt, was ihr dort anstellt und wie ihr sie wieder herausbekommt, bleibt vollständig euch überlassen.",
+    "can": "Du kannst segeln, fechten, klettern, schießen, fluchen und allerlei anderen Piratenkram. Vor allem kannst du aber Seemannsgarn spinnen und damit spontan die gemeinsame Spielwelt beeinflussen."
   },
-  "playedWith": "Die Year Zero: Chaos Engine ist ein von mir entwickeltes Regelsystem für chaotische, actionreiche und humorvolle One-Shots. Die Regeln sind sehr leicht, schnell erklärt und werden mit Spielerinnen und Spielern ausprobiert und weiterentwickelt.",
-  "expectations": [
-    { "heading": "Ein riskanter Auftrag", "text": "Das Ziel ist klar, der Weg dorthin nicht. Ihr erkundet Cartagena, knüpft Kontakte und entscheidet selbst, ob euer Vorgehen eher raffiniert, laut oder vollständig größenwahnsinnig wird." },
-    { "heading": "Seemannsgarn wird Wirklichkeit", "text": "Eure erfundenen Heldentaten sind mehr als bloße Ausschmückung. Sie können neue Fakten schaffen und den Verlauf des Abenteuers in unerwartete Richtungen treiben." }
-  ],
+  "playedWith": "Lady Bloodbath wird mit der Year Zero: Chaos Engine gespielt, meinem eigenen einfachen Rollenspielsystem für schnelle und überzeichnete Abenteuer. Die Regeln sind in wenigen Minuten erklärt und die Charaktere entstehen direkt vor dem Spiel. Ich freue mich auch immer über Feedback für das System.",
+"expectations": [
+{
+"heading": "Chaos Pur!",
+"text": "Es gibt keinen vorgesehenen richtigen Weg durch das Abenteuer. Ihr könnt euch verkleiden, über Mauern klettern, jemanden bestechen, die Wachhunde ablenken oder von mir aus auch den Helikopter erfinden. Je verrückter, desto besser. Der Abend soll absurd und humorvoll werden, wobei die YZ:CE und ihre Philosophie dafür sorgt, dass das Abenteuer nicht beliebig wird."
+},
+{
+"heading": "Piratenfilm statt Geschichtsstunde",
+"text": "Das Abenteuer orientiert sich an der überzeichneten Welt klassischer Piratenfilme und Abenteuergeschichten. Historische Genauigkeit steht dabei deutlich hinter Action, Humor und einer guten Geschichte zurück."
+}
+],
   "fitsIf": [
-    "du Piratenabenteuer mit viel Freiheit und hohem Tempo magst",
-    "du gerne große Behauptungen aufstellst und spontan darauf aufbaust",
+    "du Piraten, Action und leicht albernen Humor magst",
+    "du Rollenspiel ohne viel Vorgeplänkel ausprobieren möchtest",
     "du mit einer Gruppe gemeinsam kreatives Chaos erzeugen möchtest"
   ],
   "system": "Year Zero: Chaos Engine – in Entwicklung",
-  "duration": "etwa 3–4 Stunden",
+  "duration": "etwa 3 Stunden",
   "players": "3–5 Personen",
   "accent": "coral",
   "pageTheme": {

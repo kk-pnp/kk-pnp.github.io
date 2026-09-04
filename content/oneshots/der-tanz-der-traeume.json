@@ -5,18 +5,32 @@
   "layout": "standard",
   "shortPitch": "Begegne den rätselhaften Vaesen der skandinavischen Sagenwelt und tauche ein in ein Schweden des 19. Jahrhunderts, in dem alte Mythen, dunkle Geheimnisse und unheimliche Mysterien lebendig werden.",
   "playerView": {
-    "who": "Du bist ein Mitglied der schwedischen Gesellschaft des 20. Jahrhunderts und besitzt den Blick: die seltene Gabe, übernatürliche Vaesen wahrzunehmen. Dieser Blick hat dich zu einer Geheimgesellschaft geführt.",
-    "do": "Du untersuchst mit deiner Gruppe die heruntergekommene Hexenkatze, sprichst mit ihren Bewohnern und versuchst herauszufinden, welches alte Geheimnis hinter den beunruhigenden Ereignissen steckt.",
-    "can": "Du beobachtest, kombinierst Hinweise und greifst auf Wissen, Beziehungen und persönliche Talente zurück. Vaesen lassen sich oft nicht einfach besiegen – Rituale, Verhandlungen und das Verständnis ihrer Motive sind entscheidend."
+    "who": "Du bist ein gewöhnliches Bürger im Schweden des 20. Jahrhunderts mit einer Ausnahme, denn du besitzt den Blick. Durch diese seltene Gabe kannst du übernatürliche Vaesen wahrnehmen. Dieser Blick hat dich zu einer Geheimgesellschaft geführt.",
+    "do": "Ein Brief führt euch während eines schweren Gewitters zur abgelegenen Hexenkatze. Dort sollt ihr einen Mann treffen, der mehr über beunruhigende Ereignisse in der Gegend weiß. Schon bald untersucht ihr das heruntergekommene Gasthaus, sprecht mit seinen Bewohnern und versucht herauszufinden, welches alte Geheimnis hinter den Geschehnissen steckt.",
+    "can": "Deine Figur bringt ganz unterschiedliche Stärken aus ihrem bisherigen Leben mit – etwa Wissen, Menschenkenntnis, medizinische Erfahrung, Überzeugungskraft oder körperliches Geschick. Durch den Blick kannst du außerdem Vaesen sehen. Übernatürliche Kräfte besitzt du selbst jedoch nicht."
   },
-  "playedWith": "Vaesen bietet ein dunkles, schauerliches Setting, durchdrungen von nordischer Folklore und den alten Mythen Skandinaviens. Mächtige Wesen leben verborgen neben den Menschen und folgen ihren eigenen Regeln, Traditionen und Bedürfnissen.\n\nDas System ist leicht zu erlernen und wird mit normalen sechsseitigen Würfeln gespielt. Je nach Gruppe und verfügbarer Zeit wählt ihr vorbereitete Figuren oder erstellt eure Charaktere gemeinsam vor dem Start.",
+  "playedWith": "Vaesen ist ein Horror-Rollenspiel über das mythische Nordeuropa des 19. Jahrhunderts. Während Städte, Wissenschaft und Industrie die Welt verändern, leben die Wesen der alten nordischen Sagen weiterhin verborgen neben den Menschen. Diese Vaesen jedoch pauschal als Monster abzustempeln, würde ihnen jedoch nicht gerecht. Sie besitzen eigene Geschichten, Bedürfnisse und Regeln und sind Menschen häufig weit überlegen. Um einen Konflikt mit ihnen zu lösen, muss man deshalb oft erst verstehen, womit man es überhaupt zu tun hat und warum das Wesen handelt, wie es handelt..",
+
   "expectations": [
-    { "heading": "Ein abgelegenes Gasthaus", "text": "Ein anonymer Auftraggeber bittet euch in die Hexenkatze, um Informationen auszutauschen. Schon bald zieht euch die heruntergekommene Gaststätte immer tiefer in die Geheimnisse ihrer Bewohner." },
-    { "heading": "Ermitteln statt Monsterjagd", "text": "Im Mittelpunkt stehen eine unheimliche Atmosphäre, Gespräche, Spuren und alte Überlieferungen. Gewalt ist möglich, aber selten die beste oder sicherste Antwort." },
-    { "heading": "Inhaltshinweis", "text": "Das Abenteuer enthält typische Horrorelemente, darunter auch etwas Body Horror und die Gefährdung eines Kindes. Die Darstellung bleibt dabei im Rahmen dessen, was für das Genre üblich ist, und wird nicht besonders explizit oder drastisch." }
+  {
+  "heading": "Ein Mysterium zum Eintauchen",
+  "text": "Der Abend lebt davon, in die Welt einzutauchen, ihre Bewohner kennenzulernen und Stück für Stück zu verstehen, was hinter den beunruhigenden Ereignissen steckt. Man sollte Lust mitbringen, sich dieser Atmosphäre zu öffnen. Dabei bleibt Vaesen ein Horrorspiel. Gefahren können euch überlegen sein, und die Geschichte muss nicht in einem heroischen Sieg enden."
+  },
+  {
+  "heading": "Leicht zugängliche Regeln",
+  "text": "Die Grundregeln von Vaesen sind schnell erklärt und werden hauptsächlich mit normalen sechsseitigen Würfeln gespielt. Die Charaktererstellung bietet etwas mehr Auswahl und braucht entsprechend mehr Zeit. Je nach Gruppe und verfügbarer Zeit verwenden wir deshalb vorbereitete Figuren oder erstellen eure Charaktere gemeinsam vor dem Spiel."
+  },
+  {
+  "heading": "Trigger Warning",
+  "text": "Das Abenteuer enthält typische Horrorelemente, darunter etwas Body Horror und die Gefährdung eines Kindes. Die Darstellung bleibt im Rahmen genreüblicher Horrorinhalte und wird nicht besonders explizit oder drastisch."
+  }
   ],
+
+
+
+
   "fitsIf": [
-    "du nordische Folklore und düstere Mysterien magst",
+    "du gerne längere Gespräche mit Figuren führst und dich für ihre Geschichten interessierst",
     "du lieber ermittelst und Zusammenhänge entdeckst als nur zu kämpfen",
     "du dich auf eine langsamer wachsende Horroratmosphäre einlassen möchtest"
   ],

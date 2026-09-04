@@ -3,25 +3,35 @@
   "title": "Lasers & Feelings",
   "order": 1,
   "layout": "standard",
-  "shortPitch": "Eine schnelle, chaotische Weltraumreise zwischen Lasern und großen Gefühlen.",
+  "shortPitch": "Dein Weg ins Rollenspiel: Captain außer Gefecht. Galaxie in Gefahr. Ihr seid jetzt wohl zuständig.",
   "playerView": {
-    "who": "Du bist Teil der Crew eines Raumschiffs. Deine Rolle, dein Stil und deine Beziehungen zu den anderen Crewmitgliedern legt ihr in wenigen Minuten gemeinsam fest.",
-    "do": "Du gerätst mit der Crew in eine improvisierte Mission voller Notfälle, fremder Wesen und überraschender Wendungen. Was genau im All passiert, entsteht erst am Spieltisch.",
-    "can": "Du löst Probleme entweder mit kühlem, technischem Handeln oder mit spontanem, emotionalem Einsatz. Gute Ideen und mutige Entscheidungen zählen mehr als Regelwissen."
+    "who": "Ihr seid die Crew eines kleinen Raumschiffs: Pilotinnen, Wissenschaftler, Androiden, Draufgänger oder andere schräge Gestalten, die gemeinsam durchs All reisen. Eure Figuren und euer Schiff erstellt ihr direkt vor dem Spiel in wenigen Minuten.",
+    "do": "Euer Captain ist K. O., also liegt es plötzlich an euch, eine eskalierende Weltraumkrise irgendwie in den Griff zu bekommen. Ihr reist durchs All, trefft merkwürdige Gestalten und findet gemeinsam heraus, wie ihr den ganzen Schlamassel lösen wollt.",
+    "can": "DuVorkenntnisse kannst eigentlich alles versuchen, was zu deiner Figur passt. Die Regeln unterscheiden hauptsächlich zwischen Dingen, bei denen Technik, Präzision und Verstand helfen, und Situationen, in denen Intuition, Mut und Gefühle gefragt sind. Viel wichtiger als lange Fähigkeitslisten sind eure Ideen."
   },
-  "playedWith": "Lasers & Feelings ist ein sehr kurzes Science-Fiction-Rollenspiel über eine Raumschiffcrew zwischen kosmischen Gefahren, persönlichen Beziehungen und herrlichem Weltraumquatsch. Ein fest vorgegebenes Abenteuer gibt es nicht: Mission und Konflikte entstehen aus euren Figuren und Ideen.\n\nDie Regeln werden direkt beim Spielen erklärt. Ihr braucht nur normale sechsseitige Würfel und keinerlei Vorkenntnisse.",
+  "playedWith": "Lasers & Feelings ist ein berühmtes One-Page-Rollenspiel von John Harper – und ja, die kompletten Regeln passen tatsächlich auf eine Seite. Ihr braucht nur ein paar normale sechsseitige Würfel, erstellt eure Figuren und euer Raumschiff in wenigen Minuten und könnt praktisch sofort losspielen.\n\nDas Spiel ist auf schnelle, spontane Science-Fiction-Abenteuer ausgelegt. Die wenigen Regeln lassen viel Raum für Improvisation, schräge Ideen und das gemeinsame Entwickeln der Geschichte.",
   "expectations": [
-    { "heading": "Improvisierte Weltraummission", "text": "Die Ausgangslage wird gemeinsam erzeugt. Dadurch kann der Abend von einer außerirdischen Begegnung bis zu einem dramatischen Notfall an Bord führen." },
-    { "heading": "Schnell, chaotisch und persönlich", "text": "Neben Lasern, Technik und riskanten Manövern geht es immer auch um Gefühle, Beziehungen und die Frage, wie eure Crew unter Druck miteinander umgeht." }
+  {
+  "heading": "Rollenspiel einfach ausprobieren",
+  "text": "Lasers & Feelings lässt euch praktisch sofort losspielen. Schon die schnelle Charaktererschaffung hilft dabei, eine markante Figur mit klaren Eigenschaften zu bauen, die man leicht darstellen kann. Schauspielerisches Talent oder Rollenspielerfahrung braucht ihr dafür nicht."
+  },
+  {
+  "heading": "Sci-Fi-Atmosphäre trotz Improvisation",
+  "text": "Auch wenn viel spontan am Tisch entsteht, wird das Abenteuer dadurch nicht beliebig oder automatisch albern. Das Spiel gibt einen klaren Science-Fiction-Rahmen vor, innerhalb dessen sich ganz unterschiedliche Stimmungen entwickeln können."
+  },
+  {
+  "heading": "Kein Bock auf Sci-Fi?",
+  "text": "Inzwischen gibt es unzählige Hacks von Lasers & Feelings, die das einfache Grundprinzip auf andere Genres übertragen. Viele davon sind kostenlos im Internet verfügbar. Wenn euch davon etwas mehr anspricht, sagt einfach Bescheid."
+  }
   ],
   "fitsIf": [
-    "du gerne improvisierst und dich auf unerwartete Wendungen einlässt",
-    "du Science-Fiction mit Humor und großen Gefühlen magst",
-    "du ein sehr leichtes Regelsystem ohne Vorbereitung ausprobieren möchtest"
+    "du Pen & Paper unkompliziert ausprobieren möchtest und keine Lust auf viele Regeln hast",
+    "du Science-Fiction magst und selbst ein bisschen Inspiration mitbringst",
+    "du Lust auf einen lockeren, abwechslungsreichen Rollenspielabend hast, der vor allem Spaß machen soll."
   ],
   "system": "Lasers & Feelings",
   "duration": "2–3 Stunden",
-  "players": "3–5 Personen",
+  "players": "3–6 Personen",
   "accent": "cyan",
   "pageTheme": {
     "background": "#0b1324",

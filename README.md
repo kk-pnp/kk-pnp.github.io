@@ -63,6 +63,27 @@ Unter `expectations` können beliebig viele Blöcke ergänzt werden. `heading` i
 
 Die Box „Auf einen Blick“ zeigt automatisch `system`, `duration` und `players`. Darunter erscheinen die zwei bis vier Einträge aus `fitsIf`. Inhaltshinweise gehören als eigener Block unter `expectations`.
 
+### Projekt- und Playtestseiten
+
+Eine Seite, die kein einzelnes Abenteuer vorstellt, kann eine eigene Projektstruktur verwenden:
+
+```json
+"pageType": "playtest",
+"tag": "Playtester gesucht",
+"projectSections": [
+  {
+    "heading": "Worum geht es?",
+    "text": "Beschreibung des Projekts."
+  }
+],
+"playtestCall": {
+  "heading": "Playtester gesucht",
+  "text": "Aufruf an interessierte Testspielerinnen und Testspieler."
+}
+```
+
+Bei diesem Seitentyp werden die normalen Felder `playerView`, `playedWith`, `expectations` und `fitsIf` nicht benötigt. In der Übersicht zeigt die Karte statt Dauer und Gruppengröße nur das Feld `system` an.
+
 ## Bilder ergänzen
 
 1. Bild unter `assets/images/` ablegen, zum Beispiel `assets/images/letzte-laterne.webp`.
